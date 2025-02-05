@@ -1,0 +1,172 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:adf:9e88:0:0:0:0:0 with SMTP id a8csp7831522wrf;
+        Fri, 28 Dec 2018 11:17:14 -0800 (PST)
+X-Google-Smtp-Source: AFSGD/U1hvDOnoHUBP/5cBOmaYtCW1yJmqtMJ15M+8I6o+WKpD4uTk+MYfN76kBFtHWq2uxeYr3A
+X-Received: by 2002:a02:590:: with SMTP id 16mr19296338jal.48.1546024634359;
+        Fri, 28 Dec 2018 11:17:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1546024634; cv=none;
+        d=google.com; s=arc-20160816;
+        b=z2O+s6thIwuuVvTJ8XaFH98cZ+Inq/hoEzeFUJfi3GLeiV4+YcRnNhoC2PiqgRwv8O
+         BaNdDxlbqLsXtFaBLZNN9/rxHDVcdknT6w4xVoLhqB5rS+Eccigqw1ri9Ii62GWB4fPP
+         6dv5RvoBXLyakel1V9WJS0pAbUMGQYi0D59dnml0KLJrIZqnFhboEoc6PNNmBthc/fYq
+         009Q819UTTbkHwTvngPq5/v2UyneGhv9KJVlpfDTxB2zMMv7Zm3EwIBav8N+02r0IBeh
+         YbMDQRQ7W5JLiGSIL2iMZg29boabRr82YU1hnRk4nETLqO+9OLN5f09Ddh82pRtP68Gm
+         ms3A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature;
+        bh=ElYwX5uqIjS8lQ5+Vnvyr1qTbdJUeA7LZE8BWSScLt8=;
+        b=Prnd/55iC7d9s46zuVzVVJZHmQCMukJzbz2tniBQaRfoy1EJbeaLJYmroYHi2y4BdB
+         Zsck4Xv2XT2wsaSSX6ECjtMmhDoZq+mAYco6aHDCSqx+dB8lxH6FKEkdjkE+JOQvfV1s
+         pceKfboZzGgtUrUaT2lMWwyktMkrNS4+3KuQxh259FgcaxGuX/oKz6SYp8A6VGbeuTLs
+         +7ewGEGJWdZw9pn3SXc/MZ5DcjoOsC8qq7g5TqQxICbiBIKM1FEgVhmqR5LZji272Z7x
+         tdBoPnjxGLFLk2o8cfyLcwas5qU0zvFEyiQvEjfPphyC04hckHEMoEBrm/kdUCAiCU5B
+         h57w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=q20161114 header.b=DChNiUjN;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:163 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-po-04v.sys.comcast.net (resqmta-po-04v.sys.comcast.net. [2001:558:fe16:19:96:114:154:163])
+        by mx.google.com with ESMTPS id y62si9489021ity.3.2018.12.28.11.17.13
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 28 Dec 2018 11:17:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:163 as permitted sender) client-ip=2001:558:fe16:19:96:114:154:163;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=q20161114 header.b=DChNiUjN;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:163 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-po-03v.sys.comcast.net ([96.114.154.227])
+	by resqmta-po-04v.sys.comcast.net with ESMTP
+	id cvqPgnUR4qBnTcxdBgDz3p; Fri, 28 Dec 2018 19:17:13 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=q20161114; t=1546024633;
+	bh=ElYwX5uqIjS8lQ5+Vnvyr1qTbdJUeA7LZE8BWSScLt8=;
+	h=Received:Received:Date:From:Reply-To:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=DChNiUjNp8y3Tp/h0o4u3VKvuYod5kmeJwyKV4ofO4VXD9LT18kLJ+s128ED9R8Pa
+	 ncrI6numk1kmOjWNwIOAubu2wGGb//E1ssKDH3Gqk8/AwWLbB+SvvxiBr3RTwocmM+
+	 S4yplYBtyL+Ci6dwgeKYNlFLZcCQFVtSjTR4ju2ez16tDfw0kiGJe/d4SPoRuLNvpl
+	 UDzUR5IfP3wVI7BpkNiQJ8II9FAHTXT5ojdF5j3ytZwZIyU6r6IIYUq7/V8mOsM+x4
+	 6K5rvwQUqCBMkE6Z6kgszsYiqYN0xUx8uuKTYYdyUWqF+VEEIQqWp1LaA3I8X4XvpS
+	 q+kMoMAYhz86g==
+Received: from oxapp-asd-10o.email.comcast.net ([96.115.233.15])
+	by resomta-po-03v.sys.comcast.net with ESMTPS
+	id cxdBgHHVlkchScxdBg3hjj; Fri, 28 Dec 2018 19:17:13 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgedtledrtdehgdduvdefucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvehomhgtrghsthdqtfgvshhipdfqfgfvnecuuegrihhlohhuthemuceftddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenogfthfevqddquegrugfkmhhpohhrthgrnhgtvgculddvtddmnecujfgurhepfffhrhfvkffugggtrfgkofhisegrtdgssgertdejnecuhfhrohhmpeeuteftvfcuveetuffgjgcuoegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvtheqnecukfhppeeliedrudduhedrvdeffedrudehpddviedtudemudelgeemtgdvtddvmegsvddtugemudelgeehmeeltgeltgemvdgurgehmeegkeguugenucfrrghrrghmpehhvghlohepohigrghpphdqrghsugdquddtohdrvghmrghilhdrtghomhgtrghsthdrnhgvthdpihhnvghtpeeliedrudduhedrvdeffedrudehpdhmrghilhhfrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtpdhrtghpthhtohepshgtrghsvgihheessggrsghsohhnrdgvughupdhrtghpthhtohepfigvnhguhidrtggrshgvhiestghomhgtrghsthdrnhgvthdprhgtphhtthhopegstggrshgvhiesuggrhihmrghrkhhsihdrtghomhenucevlhhushhtvghrufhiiigvpedt
+X-Xfinity-VMeta: sc=??;st=legit
+Date: Fri, 28 Dec 2018 14:17:12 -0500
+From: BART CASEY <blackbart711@comcast.net>
+Reply-To: BART CASEY <blackbart711@comcast.net>
+To: Sam Casey <Scasey5@babson.edu>, Wendy Casey <wendy.casey@comcast.net>,
+	Brian Casey <bcasey@daymarksi.com>
+Message-ID: <908179636.516758.1546024632984@connect.xfinity.com>
+Subject: a short trip...enjoy
+Content-Type: multipart/alternative;
+	boundary="----=_Part_516757_1958684272.1546024632980"
+X-Mailer: Open-Xchange Mailer v7.8.4-Rev38
+X-Originating-IP: 2601:194:c202:b20d:1945:9c9c:2da5:48dd
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 167f63fc64639020
+MIME-Version: 1.0
+
+------=_Part_516757_1958684272.1546024632980
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+listen up Brian...
+
+Make sure you show significant skills and show that in this game of hitting a small ball into a small hole twilight///autumn of life that you can more than hold your head  high when it comes to the game of goofgolf. HOW ELSE CAN I FEEL THE P[RIDE where  in a town that fell short on Sport you was 
+
+PRIDE UPON THE FIELDS OF TOPSFIELD as I remember with quiet pride my  part of driver to and sometime twoand fr o in the DODGE
+
+of our DODGE  (registered under THE CLEAN AIR ACT AS A BUSSSSSSSSSSSSSSSSSSSSSSSSSSDGDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD          ) TO EFFECT YOUR DEDICATED EFFORTS...
+
+at being Topsfield's first dedicated GOLFER  WHO BROU HGT, fame and recognition to THE NORT SHORE O
+
+BOSTON .
+
+sleep is foring me to direct my                                                                                                                                                                                                                                                                                                                                                                                  toughts and praaaaaaaayers for a nice                                                                                                                                                                                                                                                                                         g'nite mates
+
+
+LOVE
+
+DAD                                                                                                                                                                                                                                                              
+------=_Part_516757_1958684272.1546024632980
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head><body><p style=3D"color: rgb(51, 51, 51); font-family: helvetica,ari=
+al,sans-serif; font-size: 12pt;">listen up Brian...</p><p style=3D"color: r=
+gb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">=
+Make sure you show significant skills and show that in this game of hitting=
+ a small ball into a small hole twilight///autumn of life that you can more=
+ than hold your&nbsp;head&nbsp; high when it comes to the game of goofgolf.=
+ HOW ELSE CAN I FEEL THE P[RIDE where&nbsp; in a town that fell short on Sp=
+ort you was&nbsp;</p><p style=3D"color: rgb(51, 51, 51); font-family: helve=
+tica,arial,sans-serif; font-size: 12pt;">PRIDE UPON THE FIELDS OF TOPSFIELD=
+ as I remember with quiet pride my&nbsp; part of driver to and sometime two=
+and fr o in the DODGE</p><p style=3D"color: rgb(51, 51, 51); font-family: h=
+elvetica,arial,sans-serif; font-size: 12pt;">of our DODGE&nbsp; (registered=
+ under THE CLEAN AIR ACT AS A BUSSSSSSSSSSSSSSSSSSSSSSSSSSDGDDDDDDDDDDDDDDD=
+DDDDDDDDDDDDDDDDDDDDDDDDDDDD &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ) TO EFFECT =
+YOUR DEDICATED EFFORTS...</p><p style=3D"color: rgb(51, 51, 51); font-famil=
+y: helvetica,arial,sans-serif; font-size: 12pt;">at being Topsfield's first=
+ dedicated GOLFER&nbsp; WHO BROU HGT, fame and recognition to THE NORT SHOR=
+E O</p><p style=3D"color: rgb(51, 51, 51); font-family: helvetica,arial,san=
+s-serif; font-size: 12pt;">BOSTON .</p><p style=3D"color: rgb(51, 51, 51); =
+font-family: helvetica,arial,sans-serif; font-size: 12pt;">sleep is foring =
+me to direct my &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; toughts and praaaaaaaayers for a nice &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; g'nite mates</p><p style=3D"color: rgb(51, 51, 51); font-family: helveti=
+ca,arial,sans-serif; font-size: 12pt;"><br></p><p style=3D"color: rgb(51, 5=
+1, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">LOVE</p>=
+<p style=3D"color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif=
+; font-size: 12pt;">DAD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp;</p></body></html>
+ =
+
+------=_Part_516757_1958684272.1546024632980--

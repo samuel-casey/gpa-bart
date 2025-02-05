@@ -1,0 +1,108 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:a05:6a10:2927:0:0:0:0 with SMTP id in39csp3022298pxb;
+        Sat, 17 Jul 2021 17:34:48 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzfA9JT6qZsWmx2JbH5njRdSZXCKWutIQu3tlKM+YINTd34j52Y2KgBU/1SMEmQhafYZJSx
+X-Received: by 2002:a02:9f89:: with SMTP id a9mr15163618jam.51.1626568487962;
+        Sat, 17 Jul 2021 17:34:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1626568487; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zVaKcbJ6bxGt1WmwZp91HM3XhdCGf8LrvS51Kh4E3QDv3jH9UTMgj5JxWqZBkQNWii
+         BKaQvTuZK+apmm6+xf+3da5tKy8r7eJXq2v0barv0WiVAcY8uPwpU+HWfqkBFNX5cG5e
+         hOLQBHbXvOdciVf7hhLZ5crevViXT4eFa3zbK4LFFMvSNPw7FMy1R1yquMWT4u+JhP91
+         K6Jlt+hDZPgoc+TQtvVuGfRLxoWOW6R5lkrHpaDfGgPkXUbN7D5KVofMF+rnLHywZkZn
+         Z4K9a76ZCYMmo6GNQItl3B+Cw7A+zmuwZCwcsiHXz3Ns/2FpvZhixt3X/JJwp4vFndM5
+         8PXw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:from:date
+         :dkim-signature;
+        bh=zIIt/UtfklMDKg44YKORPHKy9h+OGXJXj+CCKXO0FoA=;
+        b=p7CEzOA64GjASOwLDUP792lVE0zg5iEwX4Dlwk1vbyUFLoNJI97f+7Hh2Rac+Ec+qa
+         Hst/0O3pqRxRt7IqHLoXDXD54J9w2fbCrhV1/Irb+LlkA/yL1ZHEAC8bL+sRuZG+ORTJ
+         ZfM/iwJETJpcDegZpDuYAwUiCCxL2viCtpU8uRu37Ob5+dBCzVLJ6ZcoNLmrbTKtgDma
+         kA+H3oW55/PazmujhsIRBeSO9T8o3jByI9MIRcUxU3THRTZdmCW79jDv+S6zA3ZeA5Bl
+         j9nhSUmpKgmqti7ZZRiYCoaXckicJGgqGYRLAnW0qE2q2uQSZ3zJ7ZdZMtKhtBxmtnq1
+         EQTQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=5ZheFA6Y;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:34 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-ch2-02v.sys.comcast.net (resqmta-ch2-02v.sys.comcast.net. [2001:558:fe21:29:69:252:207:34])
+        by mx.google.com with ESMTPS id n21si5674599jaj.97.2021.07.17.17.34.47
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 17 Jul 2021 17:34:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:34 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:34;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=5ZheFA6Y;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:34 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-ch2-02v.sys.comcast.net ([69.252.207.98])
+	by resqmta-ch2-02v.sys.comcast.net with ESMTP
+	id 4ujfmYS7CGhhb4ulbm4855; Sun, 18 Jul 2021 00:34:47 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1626568487;
+	bh=zIIt/UtfklMDKg44YKORPHKy9h+OGXJXj+CCKXO0FoA=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type;
+	b=5ZheFA6Y8vhzY9io6IJmSeemmV3UDJcb/pxTx+YSKNCUYpD5vGyCDzva+HwRK3LSV
+	 zMgqDVxBKDukrpD8uWd+MaxC6G2cWIa50XEKoeLtqy7oyWwl7MCFFsOL5D9ac80jWm
+	 r/57M/GzIbVq0cuo91u8UGhMLqrvOLqzr4gh88tEhptFT7Nf0MbsC1QT4xrOb+2SUO
+	 FR4DBdaRYvJQ9OjZKtU0TTocRT/mHmFsf/pVZEDRM4gDPQzwLXyC9+AdBFNBaZaMnc
+	 cnRGXMTKX3E6EvR0jKv4VlA1kpLo/N67msx1NTscE8XI+n1eSnuVh3HCG3wNHTeQve
+	 Spc+tuxXZzY3g==
+Received: from oxapp-asc-73o.email.comcast.net ([96.118.219.92])
+	by resomta-ch2-02v.sys.comcast.net with ESMTPS
+	id 4ulbmdEB3EzBd4ulbmvky9; Sun, 18 Jul 2021 00:34:47 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgedvtddrvdeigddugecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucevohhmtggrshhtqdftvghsihdpqfgfvfdppffquffrtefokffrnecuuegrihhlohhuthemuceftddunecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenucfjughrpeffhffvkffugggtrfgkofhisegrtdgssgertdejnecuhfhrohhmpeeuteftvfcuveetuffgjgcuoegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvtheqnecuggftrfgrthhtvghrnhepvdekueduuefggedvffehkeefueeihedttdejhffgtdefgeehvefhtdefueduheeinecukfhppeeliedruddukedrvdduledrledvpddviedtudemudelgeemtgdvtddumegsugeltdemvgekfhefmeguleeivgemgeeivggsmeefgeejkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhephhgvlhhopehogigrphhpqdgrshgtqdejfehordgvmhgrihhlrdgtohhmtggrshhtrdhnvghtpdhinhgvthepleeirdduudekrddvudelrdelvddpmhgrihhlfhhrohhmpegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvthdprhgtphhtthhopehstggrshgvhiehsegsrggsshhonhdrvgguuh
+X-Xfinity-VMeta: sc=-100.00;st=legit
+Date: Sat, 17 Jul 2021 20:34:46 -0400
+From: BART CASEY <blackbart711@comcast.net>
+To: "Casey, Sam" <scasey5@babson.edu>
+Message-ID: <1600140519.412122.1626568487104@connect.xfinity.com>
+Subject: forgetfulness is not a character trait
+Content-Type: multipart/alternative;
+	boundary="----=_Part_412121_792972574.1626568487086"
+X-Mailer: Open-Xchange Mailer v7.10.3-Rev18
+X-Originating-IP: 2601:194:c201:bd90:e8f3:d96e:46eb:3478
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 17ab70974e85a040
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+------=_Part_412121_792972574.1626568487086
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+SAM
+Just found an E-mail addressed to you, but am at a loss how it uploaded on to me...forget my lost memory and remember the
+present...I am out and a-b-o-u-t ...cautiously.
+love
+Grampy-Gimpy
+------=_Part_412121_792972574.1626568487086
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">SAM</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Just found an E-mail addressed to you, but am at a loss how it uploaded on to me...forget my lost memory and remember the</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">present...I am out and a-b-o-u-t ...cautiously.</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">love</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Grampy-Gimpy</span>
+  </div> 
+ </body>
+</html>
+------=_Part_412121_792972574.1626568487086--

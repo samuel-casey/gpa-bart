@@ -1,0 +1,113 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:a05:7108:2cef:b0:30e:3457:ff83 with SMTP id s47csp131747gdg;
+        Tue, 6 Jun 2023 19:21:52 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ4tTHhANutId81XyKb9Uf/ScKF8+uYFyy4bpDr/vk1A2H2ZIyaJ212g9rdq7XnqzimXHlAI
+X-Received: by 2002:ac8:7f81:0:b0:3f8:6cc0:d663 with SMTP id z1-20020ac87f81000000b003f86cc0d663mr2044652qtj.17.1686104511780;
+        Tue, 06 Jun 2023 19:21:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1686104511; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wtZWYzAzfiw/DXaYF7CspuXC9ZTvujYqKGc0IS1Ab/rKcSIvPO02xdcVYAEWr/4QDg
+         qNXkmXvetpGxS9qOGaBH5qNXomGCqXNQGt4u7f0x6zzTtACruCAodUy+mNMyXXs36O4Z
+         T8lTU54URgelHkw8f0iv5hw445N7x9BUr8Lokkl9o7L4xXH6Eohv/2fptLnsubEgam+Q
+         Nh0FYbo3XouSLXlj1YVtYW9oNzpgztymd6uuI4BOC0ExkuHzLNyzHnLKfNXaVYqZYZHv
+         G+oCIJlGOi591bgUcH6dqmZN2BFdEU1sWCzo/7mNKhAeN74b3LiGGmNuv0d6lXxMOO3s
+         rLug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:from:date
+         :dkim-signature;
+        bh=SyVNBa4Vphid2HmEvOLPAagbfS2L/5pv6wmgpWHe6Kw=;
+        b=ueVCmBpxfedJsCgvCvHOb15a66YLN3djKyhMyTpFYV1JpRqmTn9eLtoLoNc6zWLXVx
+         /w1WsojVGJoLUlKdlfhPcwSMM145FFSmTKSSOeDPG2xVblZ9VnyIVLf8vHWXkW4UYQAz
+         o1Jaxk3o8k7GEKpXkFW5yJ0xkauI0r8qjcyVcDVNTZGLXgzUo4V/bpr3PQmVOtJAcU91
+         RAXPyWrVEfHFzOvd1yYcCIJ73VFUuf9j0E+4YQQLrIwYVaGnKn9/NkML/ok0Jgd+hiWT
+         kxzF7diL4nkjevnA+DnVFjSKB8mu0mpilr6uYP0CSY1Vv/aJqAOt1TOz7p3tE769CEaP
+         LKVQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=iPfIMhB+;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fd00:56::4 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-c1p-023463.sys.comcast.net (resqmta-c1p-023463.sys.comcast.net. [2001:558:fd00:56::4])
+        by mx.google.com with ESMTPS id 3-20020ac84e83000000b003f3876984efsi3993176qtp.680.2023.06.06.19.21.51
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 06 Jun 2023 19:21:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fd00:56::4 as permitted sender) client-ip=2001:558:fd00:56::4;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=iPfIMhB+;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fd00:56::4 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=comcast.net
+Received: from resomta-c1p-023412.sys.comcast.net ([96.102.18.229])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 256/256 bits)
+	(Client did not present a certificate)
+	by resqmta-c1p-023463.sys.comcast.net with ESMTP
+	id 6g7oqES3nI8NL6io3qXLmS; Wed, 07 Jun 2023 02:21:51 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1686104511;
+	bh=SyVNBa4Vphid2HmEvOLPAagbfS2L/5pv6wmgpWHe6Kw=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type:Xfinity-Spam-Result;
+	b=iPfIMhB+et9IEo+GwIuvFRlXGePdbIDGIIFj25iAArG/Fouq9uU4vrYeqPbPl5/uL
+	 8FKR7blx90vVQhvqzV5BNq2OVWIT7V0yZj40xq9kB8rF7OSrZewd71N+E+kqx33MvE
+	 AOC0xicsND+V7SVyA3RVJa1CzvFv0MnstpSe9Ov2pUjVibKLDC1fpFdCZX9TvVFyjg
+	 uINUN+HJTp/bRdF83hx0RZgmWt8HhFLwMNpXRQQjPqIlaBDR74lo8OccXKXhKyO1ug
+	 g2opfwIsr5WdlYjS3a71NW60WFGRfgIGKMnLKIQegn5kCWq6mAwjlA3n+ppukOg4Tr
+	 AhKS0CdKNCdqw==
+Received: from oxappp-asc-61o.email.comcast.net ([96.118.223.0])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 256/256 bits)
+	(Client did not present a certificate)
+	by resomta-c1p-023412.sys.comcast.net with ESMTPS
+	id 6io2q2oGrUdLX6io2qDp1N; Wed, 07 Jun 2023 02:21:51 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgedvhedrgedtfedgudelucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvehomhgtrghsthdqtfgvshhipdfqfgfvpdfpqffurfetoffkrfenuceurghilhhouhhtmecufedtudenucesvcftvggtihhpihgvnhhtshculddquddttddmnecujfgurhepfffhvffkufggtgfrkgfoihesrgdtsggsredtjeenucfhrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtnecuggftrfgrthhtvghrnhepudeujeelvdevfedtfefhieevieefiefgveeiiedttefghefgleevhfduiedthffhnecukfhppeeliedruddukedrvddvfedrtddpvdeitddumedukeekmegtleejfhemlegutddtmeehugegheemudhfkegumegrheefvgemtgehtdgrnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehhvghlohepohigrghpphhpqdgrshgtqdeiudhordgvmhgrihhlrdgtohhmtggrshhtrdhnvghtpdhinhgvthepleeirdduudekrddvvdefrddtpdhmrghilhhfrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtpdhnsggprhgtphhtthhopedupdhrtghpthhtohepshgtrghsvgihheessggrsghsohhnrdgvughu
+X-Xfinity-VMeta: sc=-100.00;st=legit
+Date: Tue, 6 Jun 2023 22:21:50 -0400
+From: blackbart711@comcast.net
+To: Sam Casey <Scasey5@babson.edu>
+Message-ID: <1712115868.588698.1686104510703@connect.xfinity.com>
+Subject: IP'm late
+Content-Type: multipart/alternative;
+	boundary="----=_Part_588697_713425215.1686104510690"
+X-Mailer: Open-Xchange Mailer v7.10.6-Rev39
+X-Originating-IP: 2601:188:c97f:9d00:5d45:1f8d:a53e:c50a
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 18893a9158900452
+X-Message-Flag: Flag for follow up
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+------=_Part_588697_713425215.1686104510690
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+I'm late ....so what ! I When I first came to New York I spent more time than that looking for a rooming house that had no cats. dogs, or monkeys, I found two of three - enjoyed the ride and considered myself lucky to be accident free bewildered and broke.
+ 
+My Avalon deserves a story of its own -so that will wait until later.
+You are in the Capitol ,of the WORLD ENJOY and give my regards to Jasmine.
+ 
+------=_Part_588697_713425215.1686104510690
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">I'm late ....so what ! I When I first came to New York I</span><span style="font-family: helvetica; font-size: 14pt;"> spent more time than that looking for a rooming house that had no cats. dogs, or monkeys, I found two of three - enjoyed the ride and considered</span><span style="font-family: helvetica; font-size: 14pt;"> myself lucky to be accident free bewildered and broke.</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">My Avalon deserves a story of its own -so that will wait until later.</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">You are in the Capitol ,of the WORLD <strong>ENJOY <em>and give my regards to</em>&nbsp;<em>Jasmine.</em></strong></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div>
+ </body>
+</html>
+------=_Part_588697_713425215.1686104510690--

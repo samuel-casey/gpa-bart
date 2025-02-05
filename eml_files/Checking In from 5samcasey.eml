@@ -1,0 +1,144 @@
+Delivered-To: 5samcasey@gmail.com
+Received: by 2002:adf:f444:0:0:0:0:0 with SMTP id f4csp1463057wrp;
+        Fri, 2 Jul 2021 14:15:31 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzM0tDpE51JGrTAB+ul5Eg1jgVAwUcnTy3iYitR85igpMPzAYPWdRwdxGIXCXVsFdNRTBIQ
+X-Received: by 2002:a02:90cb:: with SMTP id c11mr1232233jag.53.1625260531067;
+        Fri, 02 Jul 2021 14:15:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1625260531; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Ov25QXjjjWmQNwclIz920/tstaZZ9/tbiz+d253IhCCjptKU/u2Nrt8/5TJ7iwhHhw
+         LN9JFozxIAljaa9V8osK7JIAwOn3Vt5kNCKf0qWceRVYclN2cziUpuDl82EWseSrbtW0
+         /mpx9xbI634yRmNuK824HhxHBkAYrrB+aNHCSflV9avgM5NZlMv/iiI9D0tereWISG+T
+         HRGQPtmutohtEFs0DCRT+eiUSz8DXLp8/xOi+g/3cUNs85F1Xgfl71+z8MI9zC5EJ4OU
+         QqF+chTTCwjx6FWMyv4wPy3qtipl7ag3qXPMqGzjSrnqGFukC5YRd7B9tzdwqUDS7TUd
+         Wwzg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:references:in-reply-to:message-id
+         :to:from:date:dkim-signature;
+        bh=Dirr9cqXvBSFUqEcszbjH6X7pzcRyMrPOY+jnSrGeA0=;
+        b=inxqNDqp786OYqoBHvHX5SopChiGm9G9Gfi2ewnE+r5PlVmA8lJmiCSlAxAxirgpvl
+         dLhJTTLNfAY5uZYgR4a9bqEs9+CPxTAQhV6sm05WVd6lKSaFpTs194Jjeny1sCEElJ8J
+         VP5MSPI33cbXtafMXMM1wOiD8cQqBWQuB8qr1x5Z5RLcnTckXnMrgmB52yvqFyiNWPgO
+         EN7JNTaJfCtLzRQLP8cINrTIyO5fE3g/SfVSO0LpBTOuRbkNhea19VXRECjeSZ7QsBH1
+         SHtNV8Kwre6D0Ns4qgNbv1KhhsgNN0vfH+9ru25L+qAN/5VvxIIXS1zvWaCTYje3qD69
+         978g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b="Un/bdt5Z";
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:33 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-ch2-01v.sys.comcast.net (resqmta-ch2-01v.sys.comcast.net. [2001:558:fe21:29:69:252:207:33])
+        by mx.google.com with ESMTPS id d187si5251639iog.56.2021.07.02.14.15.30
+        for <5samcasey@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 02 Jul 2021 14:15:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:33 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:33;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b="Un/bdt5Z";
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:33 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-ch2-02v.sys.comcast.net ([69.252.207.98])
+	by resqmta-ch2-01v.sys.comcast.net with ESMTP
+	id zOKOlu7RFfFsMzQVWlOb7u; Fri, 02 Jul 2021 21:15:30 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1625260530;
+	bh=Dirr9cqXvBSFUqEcszbjH6X7pzcRyMrPOY+jnSrGeA0=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type;
+	b=Un/bdt5ZNfDDHtKaUWJoW0mMsyxE0B4OiWwU6nlzb9wlTcc6+yOipU658+5fd8HGF
+	 pFaRrFIumeudrGfkeUumpbK4GKuWGNkXGbtj6DxnacN1k0a8TlN3aIandk/A9utmtY
+	 HFFTbQ+FMoMFCBLMN76Vvhe5a9IzygM+xuoPqbAJraV4r0MZHbVxj4Hj9vQBm/sodD
+	 byD4XqY2rBD7kXXM+Me0AXDNaWsHqLT+jx5AiOyc86CqZr81furUGky5i1Q+RQ/dP5
+	 aWslND0zOernXIFmEec14JRmYMnlsZ891Y319Y1myPcRu35beI9Uqf35hXKW9qI14M
+	 LcRRpkZ9khsLg==
+Received: from oxapp-ch2f-35o.email.comcast.net ([96.117.82.198])
+	by resomta-ch2-02v.sys.comcast.net with ESMTPS
+	id zQVNla4b4K9I7zQVNlxkIt; Fri, 02 Jul 2021 21:15:27 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgeduledrfeeikedgudehkecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucevohhmtggrshhtqdftvghsihdpqfgfvfdppffquffrtefokffrnecuuegrihhlohhuthemuceftddunecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenucfjughrpeffhffvkfgjfhfugggtrfgkofhisegrtdgssgertdejnecuhfhrohhmpeeuteftvfcuveetuffgjgcuoegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvtheqnecuggftrfgrthhtvghrnhepveeludegjeetheeujeegffefgeduueeggfejteevjeehveevleduueekffelgffhnecukfhppeeliedruddujedrkedvrdduleekpdegrdduiedrvdegvddrudegvdenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhephhgvlhhopehogigrphhpqdgthhdvfhdqfeehohdrvghmrghilhdrtghomhgtrghsthdrnhgvthdpihhnvghtpeeliedruddujedrkedvrdduleekpdhmrghilhhfrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtpdhrtghpthhtohephehsrghmtggrshgvhiesghhmrghilhdrtghomh
+X-Xfinity-VMeta: sc=-100.00;st=legit
+Date: Fri, 2 Jul 2021 17:15:21 -0400 (EDT)
+From: BART CASEY <blackbart711@comcast.net>
+To: Sam Casey <5samcasey@gmail.com>
+Message-ID: <217003820.504172.1625260521697@connect.xfinity.com>
+In-Reply-To: <CAAm7pXsDPd0c45F3wjFeTjCjS9C4VVN7b1s3fUg7R5L9inGbqQ@mail.gmail.com>
+References: <CAAm7pXsDPd0c45F3wjFeTjCjS9C4VVN7b1s3fUg7R5L9inGbqQ@mail.gmail.com>
+Subject: Re: Checking in
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_504171_2043527247.1625260521685"
+X-Priority: 3
+Importance: Normal
+X-Mailer: Open-Xchange Mailer v7.10.3-Rev18
+X-Originating-IP: ::ffff:4.16.242.142
+X-Originating-Client: open-xchange-appsuite
+
+------=_Part_504171_2043527247.1625260521685
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Sam,
+
+thanks for the email. i am sure you are planning some sort of party for the 4th but i hope its not an insurrection of some sort!  have fun. see you when I am out of this place.
+
+Grandpa
+
+>     On 06/30/2021 9:15 PM Sam Casey <5samcasey@gmail.com> wrote:
+>      
+>      
+>     Hi Grandpa,
+> 
+>     Happy to hear you went home today. How are you doing?
+> 
+>     Love,
+>     Sam
+> 
+
+------=_Part_504171_2043527247.1625260521685
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+ </head>
+ <body>
+  <div style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Hi Sam,</span>
+  </div> 
+  <div style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">thanks for the email. i am sure you are planning some sort of party for the 4th but i hope its not an insurrection of some sort!&nbsp; have fun. see you when I am out of this place.</span>
+  </div> 
+  <div style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Grandpa</span>
+  </div> 
+  <blockquote type="cite"> 
+   <div>
+    On 06/30/2021 9:15 PM Sam Casey &lt;5samcasey@gmail.com&gt; wrote:
+   </div> 
+   <div>
+    &nbsp;
+   </div> 
+   <div>
+    &nbsp;
+   </div> 
+   <div dir="ltr">
+    Hi Grandpa,
+    <br>
+    <br>Happy to hear you went home today. How are you doing?
+    <br>
+    <br>Love,
+    <br>Sam
+   </div> 
+  </blockquote> 
+ </body>
+</html>
+------=_Part_504171_2043527247.1625260521685--

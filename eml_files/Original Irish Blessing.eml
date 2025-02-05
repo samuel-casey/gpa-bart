@@ -1,0 +1,245 @@
+Delivered-To: 5samcasey@gmail.com
+Received: by 2002:a17:907:807:b0:a52:aa66:2ed1 with SMTP id wv7csp215048ejb;
+        Fri, 3 May 2024 20:27:07 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHREaNarbHGmGfnRv1XDeY3QuwdUi/NaZkT/fAmTiIUdiJF4/+Z/8eHy9hAV9FGs/LmWuqn
+X-Received: by 2002:a17:902:d588:b0:1eb:fe3:3436 with SMTP id k8-20020a170902d58800b001eb0fe33436mr5805019plh.52.1714793227225;
+        Fri, 03 May 2024 20:27:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1714793227; cv=none;
+        d=google.com; s=arc-20160816;
+        b=eJJEV0h1sfuYMFl6+CqWXO4XPqhNNCnSJJv1mwgMAH+t0aqe890yKtwBp+C3KpXkMm
+         sNpVB6i5y+laDNGNpbcDRpo+KAjfsjN/YKj5S65luCx9T6mfUVgtVjkGYqNywHl3pNk/
+         aRN3ffUpgiuoLc1U8vo3d2ApBd/6nEjSEUaN+CrCXajwQjdON+4qtQkoOGjks3FcItGa
+         xjtTbHzY3a0kT31IyfEyUvjgGWkquNy24pFpdHnlij1jIkOQ27TClJneHBmwMNnE81Nu
+         qpwYTLAIRbVv/kZEXMKEuieyrB0Iki5xhcHZz2bWCnnWbEytW2gEasziir4+DD3XkPAi
+         /VmQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:references:in-reply-to:message-id
+         :to:from:date:dkim-signature;
+        bh=Wc3YUsGL2NSUF2jvhWvcMqLW+cR54xjP/GMUVC92B5s=;
+        fh=glm3XPLbpNLJjQqtMoWYVsyD5UZQ7xQJqvTMZv78ecA=;
+        b=zm6Zphky0fpZUsyk2Gkkz+0Jac0vjJ5tlVe4X4C+lgBVYToaZdIdO4VwSevQI7Y954
+         ST+llj51DK+fUZqpdeoUjNVfP+5x66oe+gOKinBojP1qDfmpohDEonbTbFFytGoi7TN5
+         6scReBDzlouacbdTsj9n0ON2ykxGC7I5CQZ9lNAGhGuG/Zai3gUO8NTaasThADI6wtTV
+         fuWuiSbvaGM1NKsTCfPcKnBzT+JKOAGZSk/05Fxb6DuzJI/Mj1xEv2UDG7Hy3kijMd5Z
+         vEdZk2pM9nQRqUtfCwDmOAe1Cc/nunFUk6df0JZ0SMp/B0n3HnOfpK2aoBpAH+1hv3rO
+         VvDQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=PJ9yEJL4;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fd02:2446::a as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-h2p-567062.sys.comcast.net (resqmta-h2p-567062.sys.comcast.net. [2001:558:fd02:2446::a])
+        by mx.google.com with ESMTPS id jj13-20020a170903048d00b001ea9580e570si3982734plb.186.2024.05.03.20.27.06
+        for <5samcasey@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 03 May 2024 20:27:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fd02:2446::a as permitted sender) client-ip=2001:558:fd02:2446::a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=PJ9yEJL4;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fd02:2446::a as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=comcast.net
+Received: from resomta-h2p-555061.sys.comcast.net ([96.102.179.200])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 256/256 bits)
+	(Client did not present a certificate)
+	by resqmta-h2p-567062.sys.comcast.net with ESMTPS
+	id 35MKszASBtc3L363Gs7QUY; Sat, 04 May 2024 03:27:06 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1714793226;
+	bh=Wc3YUsGL2NSUF2jvhWvcMqLW+cR54xjP/GMUVC92B5s=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type:Xfinity-Spam-Result;
+	b=PJ9yEJL4xACMeWs0XyRHkhax5jsy5DAnLP472KRVsJjP7G2MtrsEPiqVtzVxXPJtC
+	 kfhMp1gTZuhhW4ILt8BI6eAXJzIJe3Vy9iEUqCl2u6DJJXg5CrJpIVVEKUXoNYZN1S
+	 MWtV6Nw1DqI4zkU3+enoxN4JVCTxSJmmDo0R+qqMzJhJ2BeNZcWWKF3vog9nXD3zWO
+	 wKDWw4zOCnHHelmAhyg65qhDqRqu6xx8OFAZXPPn825UtJinweLUnswxzMZwOCUZJv
+	 ZRBJHw/8gBRnY4ITCoHpfvCHg+U98ftzujb6GJ6RMKrrR8KYvlHIrNjPPkpJtRm7OD
+	 A9C+E88oYo7Eg==
+Received: from oxapp-asd-83o.email.comcast.net ([96.116.140.76])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 256/256 bits)
+	(Client did not present a certificate)
+	by resomta-h2p-555061.sys.comcast.net with ESMTPS
+	id 362tsp1lOq6ad362uscp7d; Sat, 04 May 2024 03:26:44 +0000
+Date: Fri, 3 May 2024 23:26:43 -0400 (EDT)
+From: blackbart711@comcast.net
+To: Sam Casey <5samcasey@gmail.com>
+Message-ID: <1589858801.305139.1714793203739@connect.xfinity.com>
+In-Reply-To: <919730061.304128.1714786571761@connect.xfinity.com>
+References: <169866692.526137.1714667260736@connect.xfinity.com>
+ <PH8PR14MB594223FB19124C1F216321C0C9182@PH8PR14MB5942.namprd14.prod.outlook.com>
+ <919730061.304128.1714786571761@connect.xfinity.com>
+Subject: Fwd: the Original Irish Blessin;g (before any other version)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_305138_193637890.1714793203723"
+X-Priority: 3
+Importance: Normal
+X-Mailer: Open-Xchange Mailer v7.10.6-Rev55
+X-Originating-IP: 2601:188:c983:2100:7942:d27:930a:6222
+X-Originating-Client: open-xchange-appsuite
+X-CMAE-Envelope: MS4xfI/PkuVuJBcce7xNt+9EnmylN/IKTGelor5y2xJFJC6oDeD3Pf+E5GOy6Oq/iaBOQWVFqy3QS6NF1fRyt0QxtzdYLjHumVHj92+Zpd1n/yamcVUazsWX
+ Lee7hP6+8ocX+w/fLmaFRRzGOMSHRqizum4YoHea7wec0EczESjplkSLRnznrKtj9OZohb/pg9Y+u0qISHQ8L7JbcEWtxCKnqykHG4c8eV0754nX637lc0tD
+
+------=_Part_305138_193637890.1714793203723
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+SAM :
+
+> Can't help in any other way...EXCEPT  TO WISH YOU THE BEST OF LUCK
+> 
+
+> AND       
+> 
+MAY THE ROAD RISE TO MEET YOU
+   
+     AND THE SUN AND WIND BE AT YOUR BACK
+ 
+UNTIL WE MEET AGAIN MAY GOD EVER HOLD YOU
+ 
+                                                         IN THE HOLLOW OF HIS HAND
+
+> anonymous 
+> 
+ 
+ 
+ 
+ 
+ 
+
+> MAY GOD EVER HOLD YOU
+>                            
+>                       IN THE HOLLOW OF HIS HAND         
+>  
+> anonymous
+> 
+> > Get Outlook for iOS https://aka.ms/o0ukef
+> > 
+> > ---------------------------------------------
+> > From: blackbart711@comcast.net <blackbart711@comcast.net>
+> > Sent: Thursday, May 2, 2024 10:27:40 AM
+> > To: Brian Casey <bcasey@daymarksi.com>
+> > Subject: yu no
+> >  
+> > what is SAM E-MAIL ADDRESS
+> > DAD
+> > 
+> > 
+> > 
+> > Disclaimer
+> > 
+> > The information contained in this communication from the sender is confidential. It is intended solely for use by the recipient and others authorized to receive it. If you are not the recipient, you are hereby notified that any disclosure, copying, distribution or taking action in relation of the contents of this information is strictly prohibited and may be unlawful.
+> > 
+> > 
+> 
+
+------=_Part_305138_193637890.1714793203723
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica,arial,sans-serif; color: #000000;">
+   SAM :
+  </div> 
+  <blockquote type="cite"> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    Can't help in any other way...EXCEPT&nbsp; TO WISH YOU THE BEST OF LUCK
+   </div> 
+  </blockquote> 
+  <blockquote type="cite"> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    AND&nbsp; &nbsp; &nbsp; &nbsp;
+   </div> 
+  </blockquote> 
+  <div style="font-size:11pt;font-family:helvetica,arial,sans-serif;color:#000000;">
+   MAY THE ROAD RISE TO MEET YOU
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp; &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp; &nbsp; &nbsp;AND THE SUN AND WIND BE AT YOUR BACK
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   UNTIL WE MEET AGAIN MAY GOD EVER HOLD YOU
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IN THE HOLLOW OF HIS HAND
+  </div> 
+  <blockquote type="cite"> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    anonymous&nbsp;
+   </div> 
+  </blockquote> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+   &nbsp;
+  </div> 
+  <blockquote type="cite"> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    MAY GOD EVER HOLD YOU
+   </div> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   </div> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; IN THE HOLLOW OF HIS HAND&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   </div> 
+   <div style="font-size: 11pt; font-family: helvetica,arial,sans-serif; color: #000000;">
+    &nbsp;
+   </div> 
+   <div class="default-style" style="font-size: 11pt; font-family: helvetica, arial, sans-serif; color: #000000;">
+    anonymous
+   </div> 
+   <blockquote type="cite"> 
+    <div id="ms-outlook-mobile-signature">
+     Get <a href="https://aka.ms/o0ukef">Outlook for iOS</a>
+    </div> 
+    <hr style="display: inline-block; width: 98%;" tabindex="-1"> 
+    <div id="divRplyFwdMsg" dir="ltr">
+     <span style="font-size: 11pt; color: #000000; font-family: Calibri, sans-serif;"><strong>From:</strong> blackbart711@comcast.net &lt;blackbart711@comcast.net&gt;<br><strong>Sent:</strong> Thursday, May 2, 2024 10:27:40 AM<br><strong>To:</strong> Brian Casey &lt;bcasey@daymarksi.com&gt;<br><strong>Subject:</strong> yu no</span> 
+     <div>
+      &nbsp;
+     </div> 
+    </div> 
+    <div> 
+     <div class="x_default-style" style="font-size: 11pt; font-family: helvetica,arial,sans-serif; color: #000000;">
+      <span style="font-family: helvetica; font-size: 11pt;">what is SAM E-MAIL ADDRESS</span>
+     </div> 
+     <div class="x_default-style" style="font-size: 11pt; font-family: helvetica,arial,sans-serif; color: #000000;">
+      <span style="font-family: helvetica; font-size: 11pt;">DAD</span>
+     </div> 
+    </div> 
+    <br>
+    <br> 
+    <p style="font-family: Verdana; font-size: 10pt; color: #666666;"><strong>Disclaimer</strong></p> 
+    <p style="font-family: Verdana; font-size: 8pt; color: #666666;">The information contained in this communication from the sender is confidential. It is intended solely for use by the recipient and others authorized to receive it. If you are not the recipient, you are hereby notified that any disclosure, copying, distribution or taking action in relation of the contents of this information is strictly prohibited and may be unlawful.<br><br></p> 
+   </blockquote> 
+  </blockquote>
+ </body>
+</html>
+------=_Part_305138_193637890.1714793203723--

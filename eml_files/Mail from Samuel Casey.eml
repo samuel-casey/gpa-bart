@@ -1,0 +1,190 @@
+Received: from MW4PR10MB6420.namprd10.prod.outlook.com (2603:10b6:303:20e::5)
+ by CH2PR10MB3942.namprd10.prod.outlook.com with HTTPS; Tue, 26 Dec 2023
+ 21:18:45 +0000
+Received: from DS7PR03CA0204.namprd03.prod.outlook.com (2603:10b6:5:3b6::29)
+ by MW4PR10MB6420.namprd10.prod.outlook.com (2603:10b6:303:20e::5) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7113.27; Tue, 26 Dec
+ 2023 21:18:43 +0000
+Received: from DM6NAM12FT039.eop-nam12.prod.protection.outlook.com
+ (2603:10b6:5:3b6:cafe::62) by DS7PR03CA0204.outlook.office365.com
+ (2603:10b6:5:3b6::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7135.18 via Frontend
+ Transport; Tue, 26 Dec 2023 21:18:43 +0000
+Authentication-Results: spf=pass (sender IP is 96.102.19.37)
+ smtp.mailfrom=comcast.net; dkim=pass (signature was verified)
+ header.d=comcast.net;dmarc=pass action=none
+ header.from=comcast.net;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of comcast.net designates
+ 96.102.19.37 as permitted sender) receiver=protection.outlook.com;
+ client-ip=96.102.19.37; helo=resqmta-c1p-023465.sys.comcast.net; pr=C
+Received: from resqmta-c1p-023465.sys.comcast.net (96.102.19.37) by
+ DM6NAM12FT039.mail.protection.outlook.com (10.13.179.59) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7135.19 via Frontend Transport; Tue, 26 Dec 2023 21:18:43 +0000
+Received: from resomta-c1p-022592.sys.comcast.net ([96.102.18.237])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 256/256 bits)
+	(Client did not present a certificate)
+	by resqmta-c1p-023465.sys.comcast.net with ESMTP
+	id IEjmrvMO9FWpSIEp1rY0ZQ; Tue, 26 Dec 2023 21:18:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1703625523;
+	bh=dJgaBvO4jskZ9a1xAYdWZjRJ8EciBCT3pQnnADgSW+Q=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type:Xfinity-Spam-Result;
+	b=1VeB1KBAFZWqYYL1R36JdpuG1RYjdBNjKKjtVwFbLqFiomnV4rKcpZAz2bEgPONtF
+	 WpfUhRIr9FIPNzSklkozRo0o5A2vOSD77H879TVJS/Hj4gEtYFNWf4mzm1wbHSFh0Y
+	 CAJBlCzG/mQnqRzhzgM4OLu22CTGAAYvxB/JsCJaw9cPmUWzEoUuY6w0AkDxVJlVyT
+	 1jeeBF2U6tIU9JGlS3uVrq7vbdzErOR4lQdgiCnSD51vfZQXtNR9cTz32Y8wQRPFk1
+	 1b/56gbBCD2UqIObnzkQAcYDNkuUB3qFBo7AkEtm6MAOCk3mafbPtvj4oCUkZu8zQ2
+	 gKe4XSf2NcSVA==
+Received: from oxapp-asd-31o.email.comcast.net ([96.116.141.80])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 256/256 bits)
+	(Client did not present a certificate)
+	by resomta-c1p-022592.sys.comcast.net with ESMTPS
+	id IEp0rqZ05tGH4IEp0rXBTu; Tue, 26 Dec 2023 21:18:42 +0000
+Date: Tue, 26 Dec 2023 16:18:42 -0500 (EST)
+From: blackbart711@comcast.net
+To: Sam Casey <Scasey5@babson.edu>
+Message-ID: <454786288.1249478.1703625522433@connect.xfinity.com>
+Subject: a promise
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1249477_1515030683.1703625522417"
+X-Mailer: Open-Xchange Mailer v7.10.6-Rev39
+X-Originating-IP: 2601:188:c97f:9d00:3c03:38f6:3970:baaf
+X-Originating-Client: open-xchange-appsuite
+Return-Path: blackbart711@comcast.net
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Dec 2023 21:18:43.4171
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 50b65981-3e0e-404a-a45f-08dc06583d3e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: e83d2ad7-3bcd-4d5c-9d6c-6ffa1a4434bf:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DM6NAM12FT039:EE_|MW4PR10MB6420:EE_|CH2PR10MB3942:EE_
+X-MS-Exchange-Organization-AuthSource: DM6NAM12FT039.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 50b65981-3e0e-404a-a45f-08dc06583d3e
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report: CIP:96.102.19.37;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:resqmta-c1p-023465.sys.comcast.net;PTR:resqmta-c1p-023465.sys.comcast.net;CAT:NONE;SFS:(13230031)(4636009)(84050400002)(451199024)(7596003)(356005)(7636003)(3480700007)(336012)(956004)(82202003)(26005)(83380400001)(86362001)(58800400005)(8676002)(22186003)(9686003)(33964004)(5660300002)(1096003)(7116003)(6862004)(35970500022);DIR:INB;
+X-MS-Exchange-ABP-GUID: e7512c3a-5137-4316-828a-ac5cbf428cfc
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Dec 2023 21:18:43.3234
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 50b65981-3e0e-404a-a45f-08dc06583d3e
+X-MS-Exchange-CrossTenant-Id: e83d2ad7-3bcd-4d5c-9d6c-6ffa1a4434bf
+X-MS-Exchange-CrossTenant-AuthSource: DM6NAM12FT039.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR10MB6420
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5731659
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7113.022
+X-Message-Flag: Flag for follow up
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?SGthZmhFbkN1WDJLbHEzUTg1NmREZnBUUVVtdDIzT3pkQld6ajQ3OVdSeHNV?=
+ =?utf-8?B?QWg2Q1FSdmdZdG5xUmg4YjZEZVJNYW9ycVVyMzVzTmxHOXdEdTFIT1JMckJ5?=
+ =?utf-8?B?bGFLMTdGdHh0OFdYTS9CNTJBN3FVeW8rOWhQNWlqczNZVHJoUWFIdmptL2k3?=
+ =?utf-8?B?cUNvYW52Q01PRHhVYkIrYjJBZklwTGlHVkhBZlhKbEF0R3NsSHU3VEN3YmlP?=
+ =?utf-8?B?UnZkbTZLN3lCYWhPNmxUTWdRR3YxTlVibllSc093a3ovMW43T3pPaThWLy9V?=
+ =?utf-8?B?eEZDM2VsZXE4UUdIK1l5VjViNUZwWVpweXlOTm5wcHZ3aHpRV3J1b2FwTFkr?=
+ =?utf-8?B?SEhKT3QybnZyWTBQR1U5V2I1RUxjM1hGcjIvcVZEeWx6VXJyalBZdUk2eDdH?=
+ =?utf-8?B?OExqMEwvRGNnckx4S0R0MzIxQ04yWGtXdklBOGQyVWgrT3hiSGxMUkFrc3lQ?=
+ =?utf-8?B?THVsV3ZGdThrQkd2Zk9TbUF4dVU0VnVyRnpPcStZcFovRExMZmJOOTYxS3lM?=
+ =?utf-8?B?ZGVoZWYwVmlibE5mU2p5dnBHUHV6YUdNZUhlNmE4QjdpM3BsSHQ2UmRmSnc4?=
+ =?utf-8?B?SGhKbnJaWnFMbFFXR25aWFpMdkZJamVhamJkOGNFcFUvU2FveGUrcVdLNVlM?=
+ =?utf-8?B?eklzTWxZaXhUVE9FWTJSVWYzNUkwYXB2eHVCY3Bob1k2TExLN25VSVVVSVJk?=
+ =?utf-8?B?NnpnUWVqNGNraWM4TzhnaVlDbDhxeld5c3ZBWEhLSjlySVhrY0s3QUR1SGVj?=
+ =?utf-8?B?ZG9KL2tWRXJSR1l2MGVxQWxhL0QwQ1hGdEpNYmxUNDNBQUxzZ3ZCOVROeWxZ?=
+ =?utf-8?B?VzNtaUdNUWxHYXRNZ05Sc2M3U3U4K2lHaTlObW9WZndGcGkxaWQyYXFaZ05S?=
+ =?utf-8?B?djdzRUNiMUhSWnQ2M0g1SEMyUGZhbnNBVmR4aE44VTVDVkhzVDh6NkM1V1Ju?=
+ =?utf-8?B?UXZ4OVZGVHpmNzY0dHBJalp5WnpBdFE2SEZveksycjVIYnY0aG8zTzZQdE9K?=
+ =?utf-8?B?bHlJeHhrTFdlRzBpcW1GM2hmZnRvR3h1KzNxdnlIRG9PeUtPRmVnSGswVyta?=
+ =?utf-8?B?bWlLejdGcmF5TlR0ZHFHS0hTTFN0em9lc1RYUjVLMlU2U2ZudlZvOEJTZGo5?=
+ =?utf-8?B?SnNjazdzbGpEZ0JsVENCQUdLSUhqU1FNT1g4OGZkYXk2NGlsem9tYzhwWG1t?=
+ =?utf-8?B?L1A2dW5Cakx2ZnZFa3pxYzJBYm1PblVkMFBFOGI2OG9MQVh5RmgrZnhLN1Yr?=
+ =?utf-8?B?UGg3THgwRHZHYlJxcU05eEoxbUp3bzF2dEdvRmFxZGtROXRnR1BhMmQybDFO?=
+ =?utf-8?B?aVNkZ2haQ2hSR3ZGa0YxSkNmUnNpcTBQQ2NvL2dncTBRS2pTTExFRWh0WGJk?=
+ =?utf-8?B?dmk0Qis2NnM5UjlsbVhWU2lYMFhMTThFK25MTGE5bU9DSHRPckJTRUVXa1Fj?=
+ =?utf-8?B?Ung3dHhKeWcwb0VKQWVRVUs0dU1XM0JJWi94RUQxL1FKRzRQcFVpVkZSYlNv?=
+ =?utf-8?B?bG9JVXhQaHBSS2hvVWxQeUdCY1U3R1kzZEhZQXZMZ0xWWlBwbHpOemZkbmdN?=
+ =?utf-8?B?YzVrMjFMcnVnRjJsYzVxYXJ3cEs2MWxtTEtQdUs0dVJ3by9tbFBWY3M5QVY5?=
+ =?utf-8?B?cW96OEJPR3VhdFI4Mi9NNjRETUhHZWxLSlFsSVNmcWFEUGZxVDhLM2FlRldk?=
+ =?utf-8?B?UWZRdmVHZmdXTkRlWmRXb1k0Uit0Z0g1Sm1PQlMvdkpSZnhHOFRjRjZqZEpC?=
+ =?utf-8?B?bVpXOXQ3UmQ1VVRrUFZHSXZUd3U2NjMwczcyb201ZFdpZTRKSTJHdG9xenJj?=
+ =?utf-8?B?R3R3N2NHTE1JazErbkowd29TaFhtUDNuSWRvVUdCTUZaeGxtWlNtT0EzUy9V?=
+ =?utf-8?B?eVJFYXhZcldua09LNEFzcHBnS1dtU1pVMy9rKzRwcHV0aCtuR3hoNFo3Q0dC?=
+ =?utf-8?B?QWZPRDdJVmJHNEtUNU9FLytGZytMSml4enB3ZDB4VVdyRVA1Q2sxczAzN1B2?=
+ =?utf-8?B?aXowUnM5MzV2YkpBWFNnTWc2bHdlZzZKY29ydlBPUTEyVU1tVURSNFoxZmpo?=
+ =?utf-8?B?T2huSVpJbXBoa2RkZTEySnJOMk15VmpoQWQzblBCR0VTVWI4ZzFZY1J3Ui91?=
+ =?utf-8?B?SERSVzRudG90T0Eyc25JVGh2aEJ1b0VQb1YwMmp3UWpIUE82RFJ6N3ZrM0Yr?=
+ =?utf-8?B?R25lYmlzRU4yMVJEenFuMnRVL1A1eGIzRmRpV0dOTXlQelYzT2dPemw2WThF?=
+ =?utf-8?B?eUNMaUExZUZtOU1BTG9TRkRGeUVDMnZVNU1zbTI3cGZLQU80U0VoNk5TeTRu?=
+ =?utf-8?B?RDVueVFkdk9HRldDTHlTNGxzR20rWTN6Z1o3T0sxTzdGQytwYVI4UDNrMUM2?=
+ =?utf-8?B?YW5uZjVkMVlmbFgxRmxIU3pHNUtHMHBRVlFHUXIxVjhBU3FHUkkrR3RkaGRQ?=
+ =?utf-8?B?OWhscTI2YkNaZ004VldGWDlRWFRYNUFQTEZqb1BGTHNNM1FRUUxaQ2NONVM4?=
+ =?utf-8?B?enFzS3JkNHNkRXZVcDhRK05YUCtYcmdSNzhraEJ5OHhRYis3OCtRbWlrQUFY?=
+ =?utf-8?B?dHBLUzdKYjdpTXlSL0ZtNURmSnpTZS9hQzY0QkRuczVuckg0MXNpdC9zQUl3?=
+ =?utf-8?B?VmVoRkxJdz09?=
+MIME-Version: 1.0
+
+------=_Part_1249477_1515030683.1703625522417
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Your DAD agreed/promised me that he would escort me to a camera outlet (shop) this week...please remember my notification so that I can take photo\\s of my surroundings...
+...and...his promise   TAKE ME TO CAMERA OUTLET T ...................................................................By the way ...YOU might be interested in some PANOGRAAPHS OF MY   TRAVELS...ALSO A SITTING DOWN VARIANCE.
+ 
+travelAITs...why don't we share some time together and I can let you handle (with clean hands...of course) you can use my basin to soften and pre-cloot your fingrs.
+sO THE WORD IS...WHEN IS BART GOING TO GET HIS CAMERA....
+TONITE THE (TUESDAY) AT BEST BUY
+ 
+ 
+                    RIG'HT ON MC,DUFF
+                          BART
+------=_Part_1249477_1515030683.1703625522417
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 16pt;">Your DAD agreed/promised me that he would escort me to a camera out</span><span style="font-family: helvetica; font-size: 16pt;">let (shop) this week...please remember my notification so that I can take photo\\s of my surroundings...</span>
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 16pt;">...and...his promise&nbsp; &nbsp;TAKE ME TO CAMERA OUTLET T ...................................................................</span><span style="font-family: helvetica; font-size: 16pt;">By the way ...YOU might be interested in some PANOGRAAPHS OF MY&nbsp; &nbsp;TRAVELS...ALSO A SITTING DOWN VARIANCE.</span>
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 24pt;">travelAITs...why <span style="font-size: 16pt;">don't</span> we share some time together and I can let you handle (with clean hands...of course) you can use my basin to soften and pre-cloot your fingrs.</span>
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 24pt;">sO THE WORD IS...WHEN IS BART GOING TO GET HIS CAMERA....</span>
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 24pt;">TONITE THE (TUESDAY) AT BEST BUY</span>
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 24pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RIG'HT ON MC,DUFF</span>
+  </div> 
+  <div class="default-style" style="font-size: 16pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 24pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B<span style="font-size: 11pt;">ART</span></span>
+  </div>
+ </body>
+</html>
+------=_Part_1249477_1515030683.1703625522417--

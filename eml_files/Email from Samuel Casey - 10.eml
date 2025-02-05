@@ -1,0 +1,138 @@
+Delivered-To: scasey5@babson.edu
+Received: by 10.100.177.137 with SMTP id j9csp1405662pjb;
+        Mon, 24 Apr 2017 09:32:51 -0700 (PDT)
+X-Received: by 10.107.136.14 with SMTP id k14mr7694633iod.89.1493051571226;
+        Mon, 24 Apr 2017 09:32:51 -0700 (PDT)
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-ch2-09v.sys.comcast.net (resqmta-ch2-09v.sys.comcast.net. [2001:558:fe21:29:69:252:207:41])
+        by mx.google.com with ESMTPS id q6si20778128iod.20.2017.04.24.09.32.51
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 24 Apr 2017 09:32:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:41 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:41 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-ch2-06v.sys.comcast.net ([69.252.207.102])
+	by resqmta-ch2-09v.sys.comcast.net with SMTP
+	id 2gu2d52NXQe9c2guxdzMu0; Mon, 24 Apr 2017 16:32:51 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=q20161114; t=1493051571;
+	bh=Ev4I7wkz2fTEhyG4Ok6r/RvQRZfyvG02x9WE8637Jhg=;
+	h=Received:Received:Date:From:Reply-To:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=kG2y0XLMC3hEfMWEsMyWSZ3hytNcCiV4lqluyeHqETqjsTUgPL3Qd4NiKhXM3DJpk
+	 cpzKVZin1gENvgvnBBp+foUkw9tLu+nu54hrn40WaXihmJOGPq5BDfcG1na63zzoC6
+	 wIrCoM4qgjLDY/gm56AcAz2NBehdAhAmpHXXLsagO0CjyTRdqSF1z+cVPnReVhBCCC
+	 LIFidc+q7K9UwNkgRv/QKa7TBofg6wBciV8+15fW+gj2v/3N8ROkyUAsDn+z7b+H6I
+	 aA1S+yJ7ssllk8Xa6GGuk/IXUQwFpwWp96FTUfPsEgaA0S6xClW77yLiTwGP/VoqQ1
+	 1YtMFJAIas+7w==
+Received: from oxapp-wcc-35o.email.comcast.net ([96.118.166.176])
+	by resomta-ch2-06v.sys.comcast.net with SMTP
+	id 2guwdlHPceyvG2guwdA3L6; Mon, 24 Apr 2017 16:32:50 +0000
+Date: Mon, 24 Apr 2017 12:32:50 -0400
+From: blackbart711@comcast.net
+Reply-To: blackbart711@comcast.net
+To: Sam Casey <Scasey5@babson.edu>
+Message-ID: <1029956490.243830.1493051570580@connect.xfinity.com>
+Subject: TRYING TO COPY BRADY
+Content-Type: multipart/alternative;
+	boundary="----=_Part_243829_54602210.1493051570575"
+X-Mailer: Open-Xchange Mailer v7.8.3-Rev16
+X-Originating-IP: ::ffff:73.114.48.102
+X-Originating-Client: open-xchange-appsuite
+X-CMAE-Envelope: MS4wfGIwA0hYc9dmtueZlMN/R6OWD1ZAWuFPLpxzQc7Ya8KzzJQkuCo9xBYgIkC5UqhyNHR+C/UJV/HZSuPXO8FipmNUf9wNtar29owgCS0RGOIHiW4TWz7f
+ fE85ERMeRpNnRIi2GHiVn4LHoLkrie6s3hRKusViThPDrg8lhx5Lu5MdpB0LwKKRMsQVt7MvGd1zEN3lKH3nxvsWlP+0HJD8Wlw=
+MigrationWiz-UID: 15ba0cefd1866574
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+------=_Part_243829_54602210.1493051570575
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+SAM
+
+I've said my piece on a much larger scale (check your dad's E-mails) so I don't want to overdue it, you might get so
+
+excited that you show up at the white house, during a Press conference.
+
+
+
+SAM
+
+
+ its great to be able to congratulate you on YOUR
+
+WIN, but M.V.P....now that's really worth noting.
+
+
+The  opportunity to say CONGRATULATIONS, is only the
+
+             BEGINNING of many more  WINS and  MVP'S I WISH FOR YOU...SINCERELY
+
+LOVE
+
+GRANDPA BART.
+
+
+
+------=_Part_243829_54602210.1493051570575
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head><body><p><span style=3D"color: rgb(51, 51, 51); font-family: helveti=
+ca, arial, sans-serif; font-size: 12pt; background-color: rgb(255, 255, 255=
+);">SAM</span></p><p><span style=3D"color: rgb(51, 51, 51); font-family: he=
+lvetica, arial, sans-serif; font-size: 12pt; background-color: rgb(255, 255=
+, 255);">I've said my piece on a much larger scale (check your dad's E-mail=
+s) so I don't want to overdue it, you might get so</span></p><p><span style=
+=3D"color: rgb(51, 51, 51); font-family: helvetica, arial, sans-serif; font=
+-size: 12pt; background-color: rgb(255, 255, 255);">excited that you show u=
+p at the <span style=3D"font-size: 10pt;"> white house, during a Press conf=
+erence.</span></span></p><p><span style=3D"color: rgb(51, 51, 51); font-fam=
+ily: helvetica, arial, sans-serif; font-size: 12pt; background-color: rgb(2=
+55, 255, 255);"><span style=3D"font-size: 10pt;"><br></span></span></p><p><=
+span style=3D"color: rgb(51, 51, 51); font-family: helvetica, arial, sans-s=
+erif; font-size: 12pt; background-color: rgb(255, 255, 255);"><span style=
+=3D"font-size: 10pt;"><br></span></span></p><p><span style=3D"color: rgb(51=
+, 51, 51); font-family: helvetica, arial, sans-serif; font-size: 14pt; back=
+ground-color: rgb(255, 255, 255);">SAM<br></span></p><p><span style=3D"colo=
+r: rgb(51, 51, 51); font-family: helvetica, arial, sans-serif; font-size: 1=
+2pt; background-color: rgb(255, 255, 255);"><br></span></p><p><span style=
+=3D"color: rgb(51, 51, 51); font-family: helvetica, arial, sans-serif; font=
+-size: 12pt; background-color: rgb(255, 255, 255);"></span><span style=3D"c=
+olor: rgb(51, 51, 51); font-family: helvetica, arial, sans-serif; font-size=
+: 12pt; background-color: rgb(255, 255, 255);">&nbsp;its great to be able t=
+o congratulate you on YOUR</span><br></p><p><span style=3D"color: rgb(51, 5=
+1, 51); font-family: helvetica, arial, sans-serif; font-size: 12pt; backgro=
+und-color: rgb(255, 255, 255);">WIN, but M.V.P....now that's really worth n=
+oting.</span></p><p><span style=3D"color: rgb(51, 51, 51); font-family: hel=
+vetica, arial, sans-serif; font-size: 12pt; background-color: rgb(255, 255,=
+ 255);"><br></span></p><p><span style=3D"color: rgb(51, 51, 51); font-famil=
+y: helvetica, arial, sans-serif; font-size: 12pt; background-color: rgb(255=
+, 255, 255);">The&nbsp;<span style=3D"font-size: 24pt;"> opportunity to say=
+ CONGRATULATIONS, is only the</span></span></p><p><span style=3D"color: rgb=
+(51, 51, 51); font-family: helvetica, arial, sans-serif; font-size: 12pt; b=
+ackground-color: rgb(255, 255, 255);"><span style=3D"font-size: 24pt;"><spa=
+n style=3D"font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p;BEGINNING of many more &nbsp;WINS and &nbsp;MVP'S I WISH FOR YOU...SINCER=
+ELY</span></span></span></p><p><span style=3D"color: rgb(51, 51, 51); font-=
+family: helvetica, arial, sans-serif; font-size: 12pt; background-color: rg=
+b(255, 255, 255);"><span style=3D"font-size: 24pt;"><span style=3D"font-siz=
+e: 14pt;">LOVE</span></span></span></p><p><span style=3D"color: rgb(51, 51,=
+ 51); font-family: helvetica, arial, sans-serif; font-size: 12pt; backgroun=
+d-color: rgb(255, 255, 255);"><span style=3D"font-size: 24pt;"><span style=
+=3D"font-size: 14pt;">GRANDPA BART.</span></span></span></p><p><span style=
+=3D"color: rgb(51, 51, 51); font-family: helvetica, arial, sans-serif; font=
+-size: 12pt; background-color: rgb(255, 255, 255);"><br></span></p><p><span=
+ style=3D"color: rgb(51, 51, 51); font-family: helvetica, arial, sans-serif=
+; font-size: 12pt; background-color: rgb(255, 255, 255);"><br></span></p></=
+body></html>
+ =
+
+------=_Part_243829_54602210.1493051570575--

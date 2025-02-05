@@ -1,0 +1,157 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:a05:6a10:6f0c:0:0:0:0 with SMTP id jd12csp3666245pxb;
+        Mon, 7 Jun 2021 09:42:17 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyyWz+KRnNMdQpzsYkllui9ObPiuf5bppqqMHgKEGL1O6rCoKHHdG6N8X5qcNHYGC4InwMx
+X-Received: by 2002:a92:b102:: with SMTP id t2mr15670498ilh.102.1623084136879;
+        Mon, 07 Jun 2021 09:42:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1623084136; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JNaxMMxC6oTVS2FATQBINUOIBIdnQichUPOtjY1yKyD91o0t9eKwYpErMusYIie82G
+         5sfjrnQYvHQVeIRa6ScSaj1nYbmIB3DT6RQZZ2uhWj94V5e8U1vtjVtjCxC+zMv51ve3
+         Q+5tAunkFg0SjG4mmtZ2pJqNHyS8389KaKa8DRJHfjo1rkYWNY+Ht08vpbA8b6s1X2gS
+         RsMfXU9Ig9cTOX5ZUcIAKsNR2N+UQwfSOg05g4O65Vpp02VUbvOenYljcV1STalXkkbt
+         Xqbz99JmZnnsWRZ+RIE4VI5VhWzILbLrj19o6KDfuGemj7g3axXnsT/nhixH+zV3y1/K
+         iXWA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:from:date
+         :dkim-signature:dkim-signature;
+        bh=kH1AuItBxUdTBmz/wlE+Mbs8CaoSKn40kKlpa4CafuA=;
+        b=I7T3mFH7yp0jNqWNu8Wq0wvsvlf/gxQHREKkYXy1g+19FG24cSL+ewAWZs1lsLP9yJ
+         xiRZ9yf0Z7MtxHvVQkcjOgGM0PgO3ImctSd1WJ6P02aDMmvXcy4WQt8907QoOFOHi79C
+         bCSs9S/N5p9W483h/Zaht6nuQNkvjduyB2sP6SbTtu1AvmQMCsXqXs+bP1gpAwNBjHxL
+         QDOjUZBPJL2rMdSHRH8ZLcBbXQqQRmTIlTCFY9sjUA3Ejfr2ZmSjHapyMZSlmT2oW5fs
+         hXCqwI81/xWMHWAPPV+OgMwmM5SswNaQTTJ5mfxf6DIwY8khf6uxbDeaphIFKGqZ9Xrj
+         tCOw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=yzV+pVrd;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=tSJc6YK6;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:81 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resdmta-ch2-01v.sys.comcast.net (resdmta-ch2-01v.sys.comcast.net. [2001:558:fe21:29:69:252:207:81])
+        by mx.google.com with ESMTPS id f6si2327214iox.103.2021.06.07.09.42.16
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Jun 2021 09:42:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:81 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:81;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=yzV+pVrd;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=tSJc6YK6;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:81 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resqmta-ch2-07v.sys.comcast.net ([69.252.207.39])
+	by resdmta-ch2-01v.sys.comcast.net with ESMTP
+	id qHcDlALq3TKfNqIKOlr5Up; Mon, 07 Jun 2021 16:42:16 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1623084136;
+	bh=kH1AuItBxUdTBmz/wlE+Mbs8CaoSKn40kKlpa4CafuA=;
+	h=Received:Received:Received:Date:From:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=yzV+pVrdxgvD40MJWqKZQL98brh+mqnkeXQ2XNFaRtJRz4ciztNI8+X7MBRwrX+mm
+	 Jo5fR65yLLvMWvHFyTT5pke5iashfsot1rl4oRj9RvnRMuXyrjqCNehy5CUgTQzuqa
+	 a/VphNK95Wb/k32S4j9fn77jd4KPn3710rIxYOADafdQIR4MceQt9ijGPfxJHiTKnT
+	 nGzbR6oFtE0/J6Uk9Jt/TrZlaSn6X3G6tmzXoSjs113eXfo6SWIFeWE5Omxh7K4O+o
+	 etmg+NUs3YORkbdGtWjwgb7kolVSpHYiG9aKvfxAxaaUgLjZ3FunZnOhZFvJas/iyq
+	 OKBWzDeyekrLg==
+Received: from resomta-ch2-10v.sys.comcast.net ([69.252.207.106])
+	by resqmta-ch2-07v.sys.comcast.net with ESMTP
+	id qEurlXZZLIdOQqIKOltywQ; Mon, 07 Jun 2021 16:42:16 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1623084136;
+	bh=kH1AuItBxUdTBmz/wlE+Mbs8CaoSKn40kKlpa4CafuA=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type;
+	b=tSJc6YK6KVHnf/igBkSLuwY4L5P4g5pC9xeX4NOn+x38U5Fy32obU6UBEy2X4diJq
+	 IAdbjp95ozhhaDmgFz5B5rZhQOHknWd9lxlwUaUEIgoHB5m0tpgNL59+T9XVJtKew2
+	 7JteOiv5ddEmq45S7sJj+bZVPcCOO6Sz94EOnhQiUI2A5FNow6btQl6t+L4Hlw9ysZ
+	 ACJ3OX+sjkqxVeWkurNnIJoJMxE3KefIP4z6a/xC+6sU9K53ZlhQLYvhFDN3+uRevj
+	 XzIhlPZXHIGaTfFWpesmPXeSna9ssiT4bMO81WMe2g+IsDNomv6QVfzuZEd14JvD8V
+	 xPvZbO4tQZScg==
+Received: from oxapp-asc-68o.email.comcast.net ([96.118.210.171])
+	by resomta-ch2-10v.sys.comcast.net with ESMTPS
+	id qIKOlyej6FwOGqIKOlkTmQ; Mon, 07 Jun 2021 16:42:16 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgeduledrfedtjedguddtfecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucevohhmtggrshhtqdftvghsihdpqfgfvfdppffquffrtefokffrnecuuegrihhlohhuthemuceftddunecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenucfjughrpeffhffvkffugggtrfgkofhisegrtdgssgertdejnecuhfhrohhmpeeuteftvfcuveetuffgjgcuoegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvtheqnecuggftrfgrthhtvghrnhepvdekueduuefggedvffehkeefueeihedttdejhffgtdefgeehvefhtdefueduheeinecukfhppeeliedruddukedrvddutddrudejuddpvdeitddumeduleegmegtvddtudemsgguledtmegslegtleemvdejtgekmedvkehfgeemrgdvugdvnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehhvghlohepohigrghpphdqrghstgdqieekohdrvghmrghilhdrtghomhgtrghsthdrnhgvthdpihhnvghtpeeliedruddukedrvddutddrudejuddpmhgrihhlfhhrohhmpegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvthdprhgtphhtthhopehstggrshgvhiehsegsrggsshhonhdrvgguuh
+X-Xfinity-VMeta: sc=-100.00;st=legit
+Date: Mon, 7 Jun 2021 12:42:15 -0400
+From: BART CASEY <blackbart711@comcast.net>
+To: "Casey, Sam" <scasey5@babson.edu>
+Message-ID: <1025115658.218144.1623084136049@connect.xfinity.com>
+Subject: an apology and better times ahead
+Content-Type: multipart/alternative;
+	boundary="----=_Part_218143_1688468256.1623084136044"
+X-Mailer: Open-Xchange Mailer v7.10.3-Rev18
+X-Originating-IP: 2601:194:c201:bd90:b9c9:27c8:28f4:a2d2
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 179e75a7889b8a51
+MIME-Version: 1.0
+
+------=_Part_218143_1688468256.1623084136044
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Sam
+
+It isn't too often a Grandpa says to his Grandson
+...forgive my surliness... referring to Saturday's outing, but sometimes things  do not play out as planned and  there are mishaps///
+Saturday was such a day and I know your   father meant well and I didn't want to disappoint...either of you, though I knew better...
+
+having said my piece I rest my case.
+
+Good luck on whatever road you choose
+
+As they say in Ireland the 'craic' must go on...Long live the Republic
+
+Grandpa.
+------=_Part_218143_1688468256.1623084136044
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Sam</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">It isn't too often a Grandpa says to his Grandson</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">...forgive my surliness... referring to Saturday's </span>
+   <span style="font-family: helvetica; font-size: 14pt;">outing, but sometimes things&nbsp; do not play out as planned and</span>
+   <span style="font-family: helvetica; font-size: 14pt;">&nbsp;there are mishaps///</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Saturday was such a day and I know your&nbsp;&nbsp;</span>
+   <span style="font-family: helvetica; font-size: 14pt;">father meant well and I didn't want to disappoint...either of you, though I knew better...</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;"> having said my piece I rest my case.</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Good luck on whatever road you choose</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">As they say in Ireland the 'craic' must go on...Long live the Republic</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   &nbsp;
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 14pt;">Grandpa.</span>
+  </div> 
+ </body>
+</html>
+------=_Part_218143_1688468256.1623084136044--

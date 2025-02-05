@@ -1,0 +1,145 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:a4a:2a4b:0:0:0:0:0 with SMTP id x11csp599940oox;
+        Fri, 15 Oct 2021 13:08:44 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzks9/SosseiXWbll5Oklno/5y0qIVs1ju+VgSaDdKna6ct/MC53IYHU8Q2sh1GJ4F15obC
+X-Received: by 2002:a37:4553:: with SMTP id s80mr11710705qka.489.1634328524134;
+        Fri, 15 Oct 2021 13:08:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1634328524; cv=none;
+        d=google.com; s=arc-20160816;
+        b=D3IeXwLqSZ1F9KBcD8N4hNi/dnzJHW3IOWfwex1FK8gWdrK5m0bsV5wy9Vq/2b/Mpv
+         LNbngyn9hPvjWQvY/uXBlpod9vI7J1gq/80/pA9NTN/8mM9h0IE0oELktg+z1p0ZrqKN
+         C1670bdg2IzqNJL27flo57tYq+cDX3PzeYA/Lby5Q0d5BZI8m4L3cgFmxBcZwmWInCKW
+         ITI92gPrE7JcGKfzaUaTFFUBmvpOwLnAA+C+G8EnnTw88R9SCDmLfff3rOubRT+/JJzW
+         GsdWCLDcahY/IXOUAcV0QlNCnU+c83RJRjGa3VTiRjqG6c7kXtBqyHoTQpsX6qQfb51Y
+         54EA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:from:date
+         :dkim-signature;
+        bh=jHI0BXd40TgS28+t9tDjd2Hc9YFAG+cWcHZWKbhXD+U=;
+        b=Z8mjblcN3Ssi4vPF0cnGBtp5mgS2RmiviuaQYO+nl+rEfVM+lvWPHxGW4WImGRDz6U
+         fKs+aR/43clKdQN1pFSUxAw2HIVimZ0j0Bl/2KyBVsc2nzJ4plRpKrVpe0u5h3eNeoF4
+         jTIt/GMATqwm4DNfpqOE/Kb6Vz7QwzlDhC9fMNkQiVfjOMy4F+tMyb6QpTt46BORGO1M
+         6Ug93AE+bm83s0nZUTWCRnAyL555iuJtwgEg21UTZuTBhhGtoA1cDDIpziAA4cUG6gbr
+         uI6ciAiNFpqHu5bEFUVJZeMPMcdSyAkV3u6STd3FzpGA7aHs5yhzuZNPWxWLlNG0yZAY
+         9/rA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=4ddS52ry;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:36 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-ch2-04v.sys.comcast.net (resqmta-ch2-04v.sys.comcast.net. [2001:558:fe21:29:69:252:207:36])
+        by mx.google.com with ESMTPS id w9si6873308qtc.309.2021.10.15.13.08.43
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 15 Oct 2021 13:08:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:36 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:36;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=4ddS52ry;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:36 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-ch2-19v.sys.comcast.net ([69.252.207.115])
+	by resqmta-ch2-04v.sys.comcast.net with ESMTP
+	id bRANmZJtHx10ybTVTmPp6A; Fri, 15 Oct 2021 20:08:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1634328523;
+	bh=jHI0BXd40TgS28+t9tDjd2Hc9YFAG+cWcHZWKbhXD+U=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type;
+	b=4ddS52ryqsoXeCqczvTrVc+Cf+4CRUNyPqUS7O9vpsa5q+7UBqrVyaAaEBFscoVf9
+	 kGXvOKcSLED74Yy3YdrnJvcwtfTS8lt0mgXc3btD/+jb2cMYwFI/YaauKahJuXSF8T
+	 hu5HmRLvBTwwxkhuAFNkMQdAbrNgLHSvwM18UfJAwsE56VXvavDZmRhIO2JpVslH6t
+	 IgTGkavN39LYhx07Mx5wy5xRgfIFLqrPFw2b42NUkW8gKpGC3q781Opp8ez60Gb6DO
+	 AeCCuWA7Cy1e35uwpiFu4M0D77Pi6f25SLd3R1b7fE7973tX8d2rJfPo7YpRpX2YdG
+	 6ogg6s9/PaKGA==
+Received: from oxapp-asd-18o.email.comcast.net ([96.115.224.116])
+	by resomta-ch2-19v.sys.comcast.net with ESMTPS
+	id bTVQmGQqEfz4kbTVQmqd1n; Fri, 15 Oct 2021 20:08:40 +0000
+X-Xfinity-VAAS: =?utf-8?B?Z2dncnVnZ3Z1Y2Z0dmdodHJoaG91Y2R0dWRkcmdlZHZ0ZGRydmRkdWdlZGd1?=
+ =?utf-8?B?ZGVnZ2VjdXRlZnVvZGV0Z2dkb3RlZnJvZGZ0dmZjdXJmaHJvaGhmaWhobHZn?=
+ =?utf-8?B?ZW11Y2V2b2hobXRnZ3JzaGh0cWRmdHZnaHNpaGRwcWZnZnZmZHBwZmZxdWZm?=
+ =?utf-8?B?cnRlZm9rZmZybmVjdXVlZ3JpaGhsb2hodXRoZW11Y2VmdGRkdW5lY3VzZWN2?=
+ =?utf-8?B?dGZndnRnaGlwaGhpdmdobnRoaHN1Y2RscWRkdXRkZHRtZGVudWNmanVnaHJw?=
+ =?utf-8?B?ZWZmaGZmdmtmZnVnZ2d0cmZna29maGlzZWdydGRnc3NnZXJ0ZGVqbmVjdWhm?=
+ =?utf-8?B?aHJvaGhtcGVldXRlZnR2ZmN1dmVldHVmZmdqZ2N1b2Vnc2xoZ3J0Z2hrc2dn?=
+ =?utf-8?B?cnJoaHRqZWR1dWRlc3RnaG9taGd0cmdoc3RoZHJuaGd2dGhlcW5lY3VnZ2Z0?=
+ =?utf-8?B?cmZncnRoaHR2Z2hybmhlcHZkZWt1ZWR1dWVmZ2dlZHZmZmVoa2VlZnVlZWlo?=
+ =?utf-8?B?ZWR0dGRlamhmZmd0ZGVmZ2VlaHZlZmh0ZGVmdWVkdWhlZWluZWN1a2ZocHBl?=
+ =?utf-8?B?ZWxpZWRydWRkdWhlZHJ2ZGR2Z2VkcnVkZHVpZWRwdmRlaXRkZHVtZWR1bGVl?=
+ =?utf-8?B?Z21lZ3R2ZGR0dWRlbXNnZ3VsZWR0bWVkdnRnZHZyZ2VtZmVlZnNnZW11ZGR0?=
+ =?utf-8?B?dGRla21lZHZ1Z2VqdWRlbnVjZXZsaGh1c2hodHZnaHJ1ZmhpaWlndnBlZHRu?=
+ =?utf-8?B?ZWN1cmZncnJoZ3JtaGVwaGhndmxoaG9wZWhvZ2lncnBoaHBxZGdyc2hndXFk?=
+ =?utf-8?B?ZHVrZWhvcmRndm1oZ3JpaGhscmRndG9oaG10Z2dyc2hodHJkaG52Z2h0cGRo?=
+ =?utf-8?B?aW5oZ3Z0aGVwbGVlaXJkZHV1ZGVocmRkdnZkZWdyZGR1dWRlaXBkaG1yZ2hp?=
+ =?utf-8?B?bGhoZnJoaG9taGVwc2dobHJnZ3RraGdzcmdocnRoZWp1ZGR1c2VndG9oaG10?=
+ =?utf-8?B?Z2dyc2hodHJkaG52Z2h0cGRocnRnaHB0aGh0b2hlcG1oZ3RyZ2hzdmdpaGll?=
+ =?utf-8?B?ZWhzZWh2dmdocmloaWlvaGhucmRobnZnaHRwZGhydGdocHRoaHRvaGVwc2dn?=
+ =?utf-8?B?dHJnaHN2Z2loc2VndXJnaWhtaGdycmhoa3NoaGlyZGd0b2hobXBkaHJ0Z2hw?=
+ =?utf-8?B?dGhodG9oZXBuaGd0cmdoc3ZnaWhmZWVmc2VoZ21oZ3JpaGhscmRndG9oaG1w?=
+ =?utf-8?B?ZGhydGdocHRoaHRvaGVwc2hndHJnaHN2Z2loaGVlc3NnZ3JzZ2hzb2hobnJk?=
+ =?utf-8?Q?gvughu?=
+X-Xfinity-VMeta: sc=-100.00;st=legit
+Date: Fri, 15 Oct 2021 16:08:40 -0400
+From: BART CASEY <blackbart711@comcast.net>
+To: Mark Casey <mcasey65@verizon.net>, Brian Casey <bcasey@daymarksi.com>,
+	Neil Casey <ncasey33@gmail.com>, Sam Casey <Scasey5@babson.edu>
+Message-ID: <2081001582.143247.1634328520389@connect.xfinity.com>
+Subject: Annabella & Elaine's Phone Numbers in Massachussetts for Visit
+Content-Type: multipart/alternative;
+	boundary="----=_Part_143246_1211440991.1634328520375"
+X-Mailer: Open-Xchange Mailer v7.10.3-Rev18
+X-Originating-IP: 2601:194:c201:bd90:2c2a:33b:1008:2d71
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 17c85923472637c2
+MIME-Version: 1.0
+
+------=_Part_143246_1211440991.1634328520375
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+610-761-8700
+donn''t know what their objectivisunless its to see
+thereGRANDFATHER/FATHER OR  JUST 
+BUMMMINAROUNJD...WILL BE IN peebodie area tomorrow...A.M
+use this information carefully/not to bedisseminated caresloesslie or such
+more later..
+.sTACEY aBRAMSCALLLED LATE LAST NITESHE WANTED MONEYTOLD HER CHECK WITH NEEEILHE THE MAN WITMOST MONEY
+LOVE
+GRAND-PA...
+------=_Part_143246_1211440991.1634328520375
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 610-761-8700</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;">donn''t know what their objectivisunless its to see</span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;">thereGRANDFATHER/FATHER <span style="font-size: 14pt;">OR&nbsp; JUST&nbsp;</span></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;"><span style="font-size: 14pt;">BUMMMINAROUNJD...WILL BE IN peebodie area tomorrow...A.M</span></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;"><span style="font-size: 14pt;">use this information&nbsp;<span style="font-size: 12pt;">carefully/not to bedisseminated caresloesslie or such</span></span></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;"><span style="font-size: 14pt;"><span style="font-size: 12pt;">more later..</span></span></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;"><span style="font-size: 14pt;"><span style="font-size: 12pt;">.sTACEY aBRAMSCALLLED LATE LAST NITESHE WANTED MONEYTOLD HER CHECK WITH NEEEILHE THE MAN WITMOST MONEY</span></span></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;"><span style="font-size: 14pt;"><span style="font-size: 12pt;">LOVE</span></span></span>
+  </div> 
+  <div class="default-style" style="font-size: 14pt; font-family: helvetica,arial,sans-serif; color: #333333;">
+   <span style="font-family: helvetica; font-size: 18pt;"><span style="font-size: 14pt;"><span style="font-size: 12pt;">GRAND-PA...</span></span></span>
+  </div> 
+ </body>
+</html>
+------=_Part_143246_1211440991.1634328520375--

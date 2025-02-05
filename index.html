@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandpa's Emails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        #email-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .email-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+
+        .email-header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .email-subject {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+
+        .email-metadata {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .email-body {
+            white-space: pre-wrap;
+            color: #444;
+            font-size: 16px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .email-timestamp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .whitespace-note {
+            color: #999;
+            font-size: 0.9em;
+            font-style: italic;
+            display: block;
+            text-align: center;
+        }
+
+        .reply-toggle {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: 4px;
+        }
+
+        .reply-content {
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+            display: none;
+        }
+
+        .reply-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="email-container"></div>
+    <script>
+        async function loadEmails() {
+            try {
+                const response = await fetch('emails.json');
+                const emails = await response.json();
+                
+                emails.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                
+                const container = document.getElementById('email-container');
+                
+                emails.forEach(email => {
+                    const card = document.createElement('div');
+                    card.className = 'email-card';
+                    
+                    const date = new Date(email.timestamp).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    // Split email body into main content and reply
+                    const parts = splitEmailContent(email.body);
+                    
+                    card.innerHTML = `
+                        <div class="email-timestamp">${date}</div>
+                        <div class="email-header">
+                            <h2 class="email-subject">${email.subject}</h2>
+                            <div class="email-metadata">From: ${email.from}</div>
+                            <div class="email-metadata">To: ${email.to}</div>
+                        </div>
+                        <div class="email-body">${parts.mainContent}</div>
+                        ${parts.reply ? `
+                            <button class="reply-toggle">Show Previous Message</button>
+                            <div class="reply-content">${parts.reply}</div>
+                        ` : ''}
+                    `;
+                    
+                    container.appendChild(card);
+                });
+
+                // Add click handlers for reply toggles
+                document.querySelectorAll('.reply-toggle').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const replyContent = button.nextElementSibling;
+                        replyContent.classList.toggle('show');
+                        button.textContent = replyContent.classList.contains('show') 
+                            ? 'Hide Previous Message' 
+                            : 'Show Previous Message';
+                    });
+                });
+            } catch (error) {
+                console.error('Error loading emails:', error);
+            }
+        }
+
+        function splitEmailContent(body) {
+            function cleanWhitespace(text) {
+                return text.replace(/\n{4,}/g, (match) => {
+                    const count = match.length;
+                    return `\n\n<span class="whitespace-note">[ ... ${count} more blank lines ]</span>\n`;
+                });
+            }
+
+            // First remove '>' characters from the beginning of lines
+            const cleanBody = body.replace(/^>\s*/gm, '');
+            
+            // Look for common reply patterns
+            const patterns = [
+                /\n(?:On .+wrote:)\n/m,  // "On [date]... wrote:"
+                /\n(?:<.+@.+> wrote:)\n/m,  // "email@domain wrote:"
+                /\n(?:-{2,})\n/m,  // Multiple dashes
+            ];
+
+            for (const pattern of patterns) {
+                const match = cleanBody.match(pattern);
+                if (match) {
+                    const splitIndex = match.index;
+                    return {
+                        mainContent: cleanWhitespace(cleanBody.substring(0, splitIndex).trim()),
+                        reply: cleanWhitespace(cleanBody.substring(splitIndex).trim())
+                    };
+                }
+            }
+
+            return {
+                mainContent: cleanWhitespace(cleanBody.trim()),
+                reply: null
+            };
+        }
+
+        loadEmails();
+    </script>
+</body>
+</html> 

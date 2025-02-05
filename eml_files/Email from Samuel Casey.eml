@@ -1,0 +1,128 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:adf:9e88:0:0:0:0:0 with SMTP id a8csp7913155wrf;
+        Fri, 28 Dec 2018 13:04:09 -0800 (PST)
+X-Google-Smtp-Source: AFSGD/XBh60BzLWn2nVwSyo2Rjoj7cWW/Hr2ZPvHhA7R2Q3dhLFt0Ug5lLsicawXLu6gvCv6RUU3
+X-Received: by 2002:a24:19d5:: with SMTP id b204mr18178095itb.6.1546031049816;
+        Fri, 28 Dec 2018 13:04:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1546031049; cv=none;
+        d=google.com; s=arc-20160816;
+        b=enOWsto0triWfLIWIKMALY6H1aFW2OJ+I32APcEzer0sxSZnPS/YfUoG4sejW3vHb1
+         xnAb3l4equJvemU55h7hlFDlg2Pcr53YbsG9vr7ItBYX7oQfnsoRoON4m3qD86/wBqlD
+         dGY7E3Hz4ha4qBaCr2FoKKoPTrJ99yMJa8Sf6GTYe4yaeKidBeW2fWaTuAuPUInuNVQ3
+         3EcK/cNgOqxUHHf8kSvXuZ4nQD726J8cDt30+b8qxpXxVryxl4iC1l/BaCejujf2tT4Z
+         U6xJHIHUuoHgrPMFdGGQPIfc7PQObWNw3wDokk0AMOTlY6mdfXS7GdrJCB+qOhYzLE1F
+         5Yjg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature;
+        bh=CmQ68wa7mtqc0QN/f7zyzrvjsfrnL+vsgsi99pK4TAM=;
+        b=xEftZNDOEv7ewSPVhw5Y3k6LVA5/f3ncVQ6mcaWL6R13yLdAY9n0pinUNhXeFehmE1
+         JPr1OhvyVVJ9KkNiafIMo5aGFOs6BgHTEHOLVQXsrOnDuyFNxmPU8V0uKP0RpeEHK6ta
+         l/B/MFFuwPSVK5BrX088jtIp/nlHa5ligGJh2KboWU0dS7UxFzxE8w/dLjtG7zgoir8W
+         jt3qC7Oj3y6KeBCvIScdTcbWFVIjt8DOsTy5+kWYXFExLh94XNZ605l6JEgpCwB4/P0W
+         ZqGPW35JeNEV/ZVZGSgEk0S18fUwt/ad55zoZ5QoURdHxhE+fu83cgedqvkKeeyDPnV5
+         yowQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=q20161114 header.b=qAfMz4fX;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:169 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-po-10v.sys.comcast.net (resqmta-po-10v.sys.comcast.net. [2001:558:fe16:19:96:114:154:169])
+        by mx.google.com with ESMTPS id x128si15247281itc.51.2018.12.28.13.04.09
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 28 Dec 2018 13:04:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:169 as permitted sender) client-ip=2001:558:fe16:19:96:114:154:169;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=q20161114 header.b=qAfMz4fX;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:169 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-po-20v.sys.comcast.net ([96.114.154.244])
+	by resqmta-po-10v.sys.comcast.net with ESMTP
+	id cukFg4MraJ3sLczIfgiOEY; Fri, 28 Dec 2018 21:04:09 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=q20161114; t=1546031049;
+	bh=CmQ68wa7mtqc0QN/f7zyzrvjsfrnL+vsgsi99pK4TAM=;
+	h=Received:Received:Date:From:Reply-To:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=qAfMz4fX1jYm91if1W5sR4YWIbWAQlF0L/4xq3TS/7p1uRaDxaH+HkjbCfjJu73y9
+	 T+fSlO16AjT2itmgP0E978lObzVZckXyunfGJNqUU3wU/ESbELXW1eIXTiUtRpkJFn
+	 RLWhC2myT2g8oXa3ht247kA6MpINpO431raBDFMcS60Krx7fKsdL7LkZg6WWGL7obk
+	 PC5gguvSlXjZf8hYPBncnYEfG3CAUXrwdEzhbKBPAWUoMAl+pb8GtCiLK3OULEIb22
+	 yUwQ9eXsK5Jt0criDp3RbkASL2pWOi1FFt1APqC/Dic1ABr9931CVKON6iCfZFRZgw
+	 j9ylw4NB7uWog==
+Received: from oxapp-asd-61o.email.comcast.net ([96.115.230.170])
+	by resomta-po-20v.sys.comcast.net with ESMTPS
+	id czIegFSm52weJczIegq5YI; Fri, 28 Dec 2018 21:04:09 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgedtledrtdehgddugeeiucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvehomhgtrghsthdqtfgvshhipdfqfgfvnecuuegrihhlohhuthemuceftddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenogfthfevqddquegrugfkmhhpohhrthgrnhgtvgculddvtddmnecujfgurhepfffhrhfvkffugggtrfgkofhisegrtdersgertdejnecuhfhrohhmpeeuteftvfcuveetuffgjgcuoegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvtheqnecukfhppeeliedrudduhedrvdeftddrudejtddpvdeitddumeduleegmegtvddtvdemsgdvtdgumeduleegheemlegtlegtmedvuggrheemgeekuggunecurfgrrhgrmhephhgvlhhopehogigrphhpqdgrshguqdeiudhordgvmhgrihhlrdgtohhmtggrshhtrdhnvghtpdhinhgvthepleeirdduudehrddvfedtrddujedtpdhmrghilhhfrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtpdhrtghpthhtohepshgtrghsvgihheessggrsghsohhnrdgvughupdhrtghpthhtohepfigvnhguhidrtggrshgvhiestghomhgtrghsthdrnhgvthdprhgtphhtthhopegstggrshgvhiesuggrhihmrghrkhhsihdrtghomhenucevlhhushhtvghrufhiiigvpedt
+X-Xfinity-VMeta: sc=??;st=legit
+Date: Fri, 28 Dec 2018 16:04:08 -0500
+From: BART CASEY <blackbart711@comcast.net>
+Reply-To: BART CASEY <blackbart711@comcast.net>
+To: Sam Casey <Scasey5@babson.edu>, Wendy Casey <wendy.casey@comcast.net>,
+	Brian Casey <bcasey@daymarksi.com>
+Message-ID: <411792952.75467.1546031048637@connect.xfinity.com>
+Subject: previous e-mail
+Content-Type: multipart/alternative;
+	boundary="----=_Part_75466_1401180774.1546031048635"
+X-Mailer: Open-Xchange Mailer v7.8.4-Rev38
+X-Originating-IP: 2601:194:c202:b20d:1945:9c9c:2da5:48dd
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 167f6a1ac8ab8499
+MIME-Version: 1.0
+
+------=_Part_75466_1401180774.1546031048635
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+FOLKS
+
+MY APOLOGIS FOR PREVIOUS EE-MAIL WHIC WAS 'SEND' IN ERROR AND WAS A CARRY-OVER FROM LAST NITE...I WOULD PREFER YOU NOT READ IT BUT IT HIGHLIGHT SOME OF THE DIFFICUULTY I ENCOUNTER
+
+WHEN I TRY TO COMPOSE A COMPOSITION OR SOMETHING RELATED.
+
+
+TODAY IS DIFFERENT AND MY FINGERTIPS BEHAVE BETTER SO I WAS DOING FINE UNTIL LAST NITE BLINKED ON TO THE SCREEN AND SENT IT.   I D I DI NOT PRESS THE SEND BUTTON ) THIS IS THE
+
+NATURE OF THIS COMPUTER, IT EEMS AT TIMES TO HAVE A  INTELLIGENCR OF ITS  OWN.  
+
+
+\AGAIN MY APOLOGIES
+
+
+plesse understand
+
+4'''''''''''''''''''''''''''''''''''''''''''''''''''''
+------=_Part_75466_1401180774.1546031048635
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head><body><p style=3D"color: rgb(51, 51, 51); font-family: helvetica,ari=
+al,sans-serif; font-size: 12pt;">FOLKS</p><p style=3D"color: rgb(51, 51, 51=
+); font-family: helvetica,arial,sans-serif; font-size: 12pt;">MY APOLOGIS F=
+OR PREVIOUS EE-MAIL WHIC WAS 'SEND' IN ERROR AND WAS A CARRY-OVER FROM LAST=
+ NITE...I WOULD PREFER YOU NOT READ IT BUT IT HIGHLIGHT SOME OF THE DIFFICU=
+ULTY I ENCOUNTER</p><p style=3D"color: rgb(51, 51, 51); font-family: helvet=
+ica,arial,sans-serif; font-size: 12pt;">WHEN I TRY TO COMPOSE A COMPOSITION=
+ OR SOMETHING RELATED.</p><p style=3D"color: rgb(51, 51, 51); font-family: =
+helvetica,arial,sans-serif; font-size: 12pt;"><br></p><p style=3D"color: rg=
+b(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">T=
+ODAY IS DIFFERENT AND MY FINGERTIPS BEHAVE BETTER SO I WAS DOING FINE UNTIL=
+ LAST NITE BLINKED ON TO THE SCREEN AND SENT IT. &nbsp; I D I DI NOT PRESS =
+THE SEND BUTTON ) THIS IS THE</p><p style=3D"color: rgb(51, 51, 51); font-f=
+amily: helvetica,arial,sans-serif; font-size: 12pt;">NATURE OF THIS COMPUTE=
+R, IT EEMS AT TIMES TO HAVE A&nbsp; INTELLIGENCR OF ITS&nbsp; OWN. &nbsp;</=
+p><p style=3D"color: rgb(51, 51, 51); font-family: helvetica,arial,sans-ser=
+if; font-size: 12pt;"><br></p><p style=3D"color: rgb(51, 51, 51); font-fami=
+ly: helvetica,arial,sans-serif; font-size: 12pt;">\AGAIN MY APOLOGIES</p><p=
+ style=3D"color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; =
+font-size: 12pt;"><br></p><p style=3D"color: rgb(51, 51, 51); font-family: =
+helvetica,arial,sans-serif; font-size: 12pt;">plesse understand</p><p style=
+=3D"color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-s=
+ize: 12pt;">4'''''''''''''''''''''''''''''''''''''''''''''''''''''</p></bod=
+y></html>
+ =
+
+------=_Part_75466_1401180774.1546031048635--

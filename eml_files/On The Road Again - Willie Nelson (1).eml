@@ -1,0 +1,1819 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:adf:f90a:0:0:0:0:0 with SMTP id b10csp2898580wrr;
+        Thu, 18 Jul 2019 14:10:31 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwbLO1Uj7q0f3Z0eVIRAF2AWnLNvpRaYzDfmq9qOpKzqy1CUXsfZN1BZCKoC6KjcpsixEbE
+X-Received: by 2002:a02:29ce:: with SMTP id p197mr42484438jap.139.1563484231778;
+        Thu, 18 Jul 2019 14:10:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1563484231; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YqrnmFeCkfIqcNo3F8BkqLGf0bbyseYfHkCOgDgNGfwRTSpvbVT0SnftzahXCPiRiS
+         zYgkM2aYrteOcRNVCWP5RAtDgD1T95gzsJ2IzrNxSB7pIY200LevcU+lRCIvfnKLT9Ld
+         EbPLhCOhRXJ961oEIFX9b/vt+rR8gXDYLjxotlJZ8e+OZlYh0ojsD/5JX+gZpHJwspUX
+         G+msPR39BUap8oNolP/jIyBLTJbWFUT0ks0faJdms9unDidIxZ6+LAaYcZGQ6LJIcGDQ
+         SzB4x0u40g98b1PGfgaADmpdduqG6NwtWRSfURIiCmR6E5tVA6kuCg5iY4IJkvmlXvcS
+         qRpg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature;
+        bh=CimQBT4NKCHTX9wqw7XLLdlWrDUQ2oZ9lrZ6XvCBw8Q=;
+        b=BQk6jRNpN/Rtp7fG+O4LlaekXqMKTXnUZ39w8f4FIoul5VxcXBNpdyjOss8p0ac7JX
+         hcbSZFsHS6drBlbUf/U/o3V8KaSMmDFWKmfRPM1U3AwdsB2bjFglDBi7tm2ViX6WZiyH
+         21CuxWYP8rirw5EneDW62pbLW9TgopL5/XQF/A5EGvI4DxWQZJX/ss8PLvC42dKXdUFz
+         drF5GCJaKwVcJorAJGf1wh9jWccpQVBKfvbIy58gj33ciG2kfEQ/vbwg9p1a+5wuMjgD
+         lSd0eelwZwSPocR5NVj3mkD4+C/oH/TAOFoLZJFWAdsdkfqbgKw7axRdZLslOYvUz8iE
+         YLpA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=2uTIePSN;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:164 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-po-05v.sys.comcast.net (resqmta-po-05v.sys.comcast.net. [2001:558:fe16:19:96:114:154:164])
+        by mx.google.com with ESMTPS id s20si37201260iom.2.2019.07.18.14.10.31
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 18 Jul 2019 14:10:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:164 as permitted sender) client-ip=2001:558:fe16:19:96:114:154:164;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=2uTIePSN;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe16:19:96:114:154:164 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-po-07v.sys.comcast.net ([96.114.154.231])
+	by resqmta-po-05v.sys.comcast.net with ESMTP
+	id oDbfhJBKmPM4noDfbhONif; Thu, 18 Jul 2019 21:10:31 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1563484231;
+	bh=CimQBT4NKCHTX9wqw7XLLdlWrDUQ2oZ9lrZ6XvCBw8Q=;
+	h=Received:Received:Date:From:Reply-To:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=2uTIePSNo2UDF7PzJMa6isTu0hEPy+7ZghA0EF6M0GZeUEbNram9cIl/07PxmIP4z
+	 52p6RufnvAJQh5XN00RZyK88WaqlYzQ47M07G6u4JYeoa0soaOYpjQ98Yp7SN9JiSJ
+	 JaALSblUFTI2xCSu6v+kwCXvajJW8I2Ye2s0P46nheIKDYZcBaN+MApns7rTyYagMo
+	 K/pgCLNMfQkEiDZPlNGXd1qzWiD1W/Rx808h82HAig1fEC2gWFwUR6uAUeHVKfV1a4
+	 veCrb+G+3nEV1iGSXB72+wTlJGsNKlMVDRYlFCkMTTxKtsGnMjwsRVpqCwDijmTsqz
+	 AotC/IY4G55XQ==
+Received: from oxapp-asa-52o.email.comcast.net ([96.118.50.27])
+	by resomta-po-07v.sys.comcast.net with ESMTPS
+	id oDfahdBNdzG0koDfahCVYf; Thu, 18 Jul 2019 21:10:31 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgeduvddrieehgdduiedvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvehomhgtrghsthdqtfgvshhipdfqfgfvpdfpqffurfetoffkrfenuceurghilhhouhhtmecufedttdenucesvcftvggtihhpihgvnhhtshculddquddttddmnegotffhvedqqdeurggukfhmphhorhhtrghntggvucdlvddtmdenucfjughrpeffhfhrvffkufggtgfrkgfoihesrgdtsggsredtjeenucfhrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtnecukfhppeeliedruddukedrhedtrddvjedpvdeitddumeduleegmegtvddtvdemsgdvtdgumegrudgsgeemiehfieemgedtsgegmegvtggvsgenucfrrghrrghmpehhvghlohepohigrghpphdqrghsrgdqhedvohdrvghmrghilhdrtghomhgtrghsthdrnhgvthdpihhnvghtpeeliedruddukedrhedtrddvjedpmhgrihhlfhhrohhmpegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvthdprhgtphhtthhopehstggrshgvhiehsegsrggsshhonhdrvgguuhdprhgtphhtthhopegstggrshgvhiesuggrhihmrghrkhhsihdrtghomhenucevlhhushhtvghrufhiiigvpedt
+X-Xfinity-VMeta: sc=-80;st=legit
+Date: Thu, 18 Jul 2019 17:10:29 -0400
+From: blackbart711@comcast.net
+Reply-To: blackbart711@comcast.net
+To: "Casey, Sam" <scasey5@babson.edu>
+Message-ID: <290066829.322173.1563484230152@connect.xfinity.com>
+Subject: ON THE ROAD AGAIN...WILLIE NELSON
+Content-Type: multipart/alternative;
+	boundary="----=_Part_322172_1445788538.1563484230099"
+X-Mailer: Open-Xchange Mailer v7.8.4-Rev38
+X-Originating-IP: 2601:194:c202:b20d:a1b4:6f6:40b4:eceb
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 16c06ec19142f72e
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+------=_Part_322172_1445788538.1563484230099
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+SAM
+
+
+DIDN'T KNOW if u had changed your e-mail, but not so according to your dad...
+
+where you are headed is more beautiful than you can imagine, at least  that's my opinion. Kind of throws you, because you are not expecting the surreal beauty, quality, especially nightfall.
+
+I only glimpsed, YOU will explore and I know you will enjoy.
+
+
+
+(Grandmother) Elsa
+
+had some wonderful Norwegian genes (she)enjoyed the outdoors and nature.
+
+Indeed I think there is a sprinkling of nature genes in all of us. Its nice  to have
+
+some natural beauty right in your background as well as your backyard.
+
+
+You come from a generation of explorers, if you count your father's exploration
+
+crawling, running, jumping and testing the limits of both his physical ability and my patience. We all did O.K. at/in Yosemite...a weekly Friday night jaunt from Dublin to a tent site, almost every Friday night of summer. 
+
+DUBLIN, California that is..!!!
+
+
+Remind me to tell you about Dublin, Ireland on Friday nights in 50s. especially
+
+Rathmines.
+
+
+your father was also a aspiring fisherman, a work in progress but was limited since I knew nothing   about fishing or cared to...
+
+
+I'm looking forward to seeing some photo shots when you get back...
+
+
+Until then enough said...Good Luck, May God guide you...
+
+
+Enjoy your venture
+
+Grandpa Bart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+thrt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ vvvvvvvvvvvvvvvvvvvvvvvvvvvvvu
+------=_Part_322172_1445788538.1563484230099
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head><body><p class=3D"default-style" style=3D"font-size:12pt;font-family=
+:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ari=
+al black,avant garde;">SAM</span><br></p><p class=3D"default-style" style=
+=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><=
+span style=3D"font-family: arial black,avant garde;"><span style=3D"font-si=
+ze: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-s=
+ize:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=
+=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"=
+>DIDN'T KNOW if u had changed your e-mail, but not so according to your dad=
+...</span></span></p><p class=3D"default-style" style=3D"color: rgb(51, 51,=
+ 51);"><font face=3D"arial black,avant garde"><font size=3D"5">w<span><span=
+>here you are headed is more beautiful than you can imagine, at least&nbsp;=
+ that's my opinion. Kind of throws you, because you are not expecting the s=
+urreal beauty, quality, especially nightfall.</span></span></font></font><s=
+pan style=3D"font-family: arial black,avant garde;"><span style=3D"font-siz=
+e: 14pt;"> </span></span></p><p class=3D"default-style" style=3D"color: rgb=
+(51, 51, 51);"><font face=3D"arial black,avant garde"><font size=3D"5">I <s=
+pan><span>only glimpsed, YOU will explore and I know you will enjoy. </span=
+></span></font></font></p><p class=3D"default-style" style=3D"color: rgb(51=
+, 51, 51);"><font face=3D"arial black,avant garde"><font size=3D"5"><span><=
+span><br></span></span></font></font></p><p class=3D"default-style" style=
+=3D"color: rgb(51, 51, 51);"><font face=3D"arial black,avant garde"><font s=
+ize=3D"5"><span><span><br></span></span></font></font></p><p class=3D"defau=
+lt-style" style=3D"color: rgb(51, 51, 51);"><font face=3D"arial black,avant=
+ garde"><font size=3D"5"><span><span>(Grandmother) Elsa</span></span></font=
+></font></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:=
+helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: aria=
+l black,avant garde;"><span style=3D"font-size: 14pt;">had some wonderful N=
+orwegian genes (she)enjoyed the outdoors and nature.</span></span></p><p cl=
+ass=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,s=
+ans-serif;color:#333333;"><span style=3D"font-family: arial black,avant gar=
+de;"><span style=3D"font-size: 14pt;">Indeed I think there is a sprinkling =
+of nature genes in all of us. Its nice&nbsp; to have</span></span></p><p cl=
+ass=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,s=
+ans-serif;color:#333333;"><span style=3D"font-family: arial black,avant gar=
+de;"><span style=3D"font-size: 14pt;">some natural beauty right in your bac=
+kground as well as your backyard.</span></span></p><p class=3D"default-styl=
+e" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#33=
+3333;"><span style=3D"font-family: arial black,avant garde;"><span style=3D=
+"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=
+=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><=
+span style=3D"font-family: arial black,avant garde;"><span style=3D"font-si=
+ze: 14pt;">You come from a generation of explorers, if you count your fathe=
+r's exploration</span></span></p><p class=3D"default-style" style=3D"font-s=
+ize:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=
+=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"=
+>crawling, running, jumping and testing the limits of both his physical abi=
+lity and my&nbsp;</span></span><span style=3D"font-family: arial black,avan=
+t garde;"><span style=3D"font-size: 14pt;">patience. We all did O.K. at/in =
+Yosemite...a weekly Friday night jaunt from Dublin </span></span><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+">to a tent site, almost every Friday night of summer.&nbsp;</span></span><=
+/p><p class=3D"default-style" style=3D"color: rgb(51, 51, 51);"><font face=
+=3D"arial black,avant garde"><font size=3D"5">DUBLIN<span><span>, Californi=
+a that is..!!!</span></span></font></font></p><p class=3D"default-style" st=
+yle=3D"color: rgb(51, 51, 51);"><font face=3D"arial black,avant garde"><fon=
+t size=3D"5"><span><span><br></span></span></font></font></p><p class=3D"de=
+fault-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif=
+;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><spa=
+n style=3D"font-size: 14pt;">Remind me to tell you about Dublin, Ireland on=
+ Friday nights in 50s. especially</span></span></p><p class=3D"default-styl=
+e" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#33=
+3333;"><span style=3D"font-family: arial black,avant garde;"><span style=3D=
+"font-size: 14pt;">Rathmines.</span></span></p><p class=3D"default-style" s=
+tyle=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333=
+;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"fon=
+t-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"fo=
+nt-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span s=
+tyle=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14=
+pt;">your father was also a aspiring fisherman, a work in progress but was =
+limited since I knew nothing &nbsp;</span></span><span style=3D"font-family=
+: arial black,avant garde;"><span style=3D"font-size: 14pt;">&nbsp;about fi=
+shing or cared to...</span></span></p><p class=3D"default-style" style=3D"f=
+ont-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span =
+style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 1=
+4pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:1=
+2pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"f=
+ont-family: arial black,avant garde;"><span style=3D"font-size: 14pt;">I'm =
+looking forward to seeing some photo shots when you get back...</span></spa=
+n></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvet=
+ica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial blac=
+k,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p c=
+lass=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,=
+sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant ga=
+rde;"><span style=3D"font-size: 14pt;">Until then e</span></span><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+">nough said...Good Luck, May God guide you...</span></span><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"></s=
+pan></span><span style=3D"font-family: arial black,avant garde;"><span styl=
+e=3D"font-size: 14pt;"></span></span><span style=3D"font-family: arial blac=
+k,avant garde;"><span style=3D"font-size: 14pt;"></span></span></p><p class=
+=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans=
+-serif;color:#333333;"><span style=3D"font-family: arial black,avant garde;=
+"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defaul=
+t-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;col=
+or:#333333;"><span style=3D"font-family: arial black,avant garde;"><span st=
+yle=3D"font-size: 14pt;">Enjoy your venture</span></span></p><p class=3D"de=
+fault-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif=
+;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><spa=
+n style=3D"font-size: 14pt;">Grandpa Bart.</span></span></p><p class=3D"def=
+ault-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;=
+color:#333333;"><span style=3D"font-family: arial black,avant garde;"><span=
+ style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style=
+" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333=
+333;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"=
+font-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D=
+"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><spa=
+n style=3D"font-family: arial black,avant garde;"><span style=3D"font-size:=
+ 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size=
+:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D=
+"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><b=
+r></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font=
+-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-fami=
+ly: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span><=
+/span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:he=
+lvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial =
+black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p>=
+<p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ar=
+ial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avan=
+t garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=
+=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans=
+-serif;color:#333333;"><span style=3D"font-family: arial black,avant garde;=
+"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defaul=
+t-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;col=
+or:#333333;"><span style=3D"font-family: arial black,avant garde;"><span st=
+yle=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" s=
+tyle=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333=
+;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"fon=
+t-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"fo=
+nt-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span s=
+tyle=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14=
+pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12=
+pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"fo=
+nt-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br><=
+/span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-fa=
+mily:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family:=
+ arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></sp=
+an></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helve=
+tica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial bla=
+ck,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p =
+class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial=
+,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant g=
+arde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"d=
+efault-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-seri=
+f;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><sp=
+an style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-sty=
+le" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3=
+33333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;">thrt</span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></sp=
+an></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-famil=
+y:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: ar=
+ial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span>=
+</p><p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetic=
+a,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial black,=
+avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p cla=
+ss=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sa=
+ns-serif;color:#333333;"><span style=3D"font-family: arial black,avant gard=
+e;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"defa=
+ult-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;c=
+olor:#333333;"><span style=3D"font-family: arial black,avant garde;"><span =
+style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style"=
+ style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#3333=
+33;"><span style=3D"font-family: arial black,avant garde;"><span style=3D"f=
+ont-size: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"=
+font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span=
+ style=3D"font-family: arial black,avant garde;"><span style=3D"font-size: =
+14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-size:=
+12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"=
+font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br=
+></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;font-=
+family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-famil=
+y: arial black,avant garde;"><span style=3D"font-size: 14pt;"><br></span></=
+span></p><p class=3D"default-style" style=3D"font-size:12pt;font-family:hel=
+vetica,arial,sans-serif;color:#333333;"><span style=3D"font-family: arial b=
+lack,avant garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><=
+p class=3D"default-style" style=3D"font-size:12pt;font-family:helvetica,ari=
+al,sans-serif;color:#333333;"><span style=3D"font-family: arial black,avant=
+ garde;"><span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D=
+"default-style" style=3D"font-size:12pt;font-family:helvetica,arial,sans-se=
+rif;color:#333333;"><span style=3D"font-family: arial black,avant garde;"><=
+span style=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-s=
+tyle" style=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:=
+#333333;"><span style=3D"font-family: arial black,avant garde;"><span style=
+=3D"font-size: 14pt;"><br></span></span></p><p class=3D"default-style" styl=
+e=3D"font-size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;">=
+<span style=3D"font-family: arial black,avant garde;"><span style=3D"font-s=
+ize: 14pt;"><br></span></span></p><p class=3D"default-style" style=3D"font-=
+size:12pt;font-family:helvetica,arial,sans-serif;color:#333333;"><span styl=
+e=3D"font-family: arial black,avant garde;"><span style=3D"font-size: 14pt;=
+"><br></span></span></p><p class=3D"default-style" style=3D"font-size:12pt;=
+font-family:helvetica,arial,sans-serif;color:#333333;"><span style=3D"font-=
+family: arial black,avant garde;"><span style=3D"font-size: 14pt;">&nbsp;vv=
+vvvvvvvvvvvvvvvvvvvvvvvvvvvu</span></span></p></body></html>
+ =
+
+------=_Part_322172_1445788538.1563484230099--

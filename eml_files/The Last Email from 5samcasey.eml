@@ -1,0 +1,147 @@
+Delivered-To: 5samcasey@gmail.com
+Received: by 2002:ac9:13c8:0:0:0:0:0 with SMTP id z8csp3679172ocb;
+        Tue, 23 Jun 2020 02:10:37 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJy6AixVBh8LSGNP5onf0t4myW8YKo3CttFQd5dZuBNRNi5OsSVmlhmHgdADXEOCkW6QXjbj
+X-Received: by 2002:a02:212b:: with SMTP id e43mr20904608jaa.80.1592903437117;
+        Tue, 23 Jun 2020 02:10:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1592903437; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HFfp+G/zE7TWI690P9sGKI/tne+myYoCbXZu3cCXKM4TLLoFRAmvLywQqxZ7rm4lIR
+         bZX0577qoqpUwxdvo9a1+6avBjJAO8N250IHOAMLhBWGeGmNJZVap2D/qIa9NOZZZGYE
+         LTKLH/F7gJWvs0Kyyg/1ak+JHik7kslR+jhrMPVUIplp5thj5DXUux0IuGRHJKcd6NiK
+         ydFoVh+Gd+HKa/CqdhQnwGlxWfQM5K5gVSbClSENrkHCFs5fH9pQLNcDL5vdbLR2YBrJ
+         voBLX/da8V/JVXgOu5y+neYs/ZVZKhNFX23y3b7wlPA8bsNEabvB0LVJKWZmthQuSmt+
+         2dWA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature;
+        bh=VQhxlLVSZufCpxh/O0BNiNh6+hR7uXUx22ZC/TF/fuQ=;
+        b=sZlzz1AM7zO7HdI2ICB3fRfmq7cgIbCHkg/enrQh5jAIgfw/oIlakx1YokIjyKGaRh
+         EqPx5eEcSBrv7dNRXZ2qKLx0lEzTi8AmsulvI+vM4u/+qTvlookBxoOGVHT+zLHg9DZE
+         4EALWZYZmKjL+Fc+aLHVLo6rm2gZXFKEN1P5UfkFAtp8dz6UxL1VlzdZV0J3tAcs2Hjf
+         0QkydkjG+dYpZgW7BafGR4LyAIGdtLFiCBG/VrfZAbv0rLTFsGgRtOEYifqMNgDSTUmu
+         HKWQ3a/qhwowZds9RkV+QfE9w+oPhUjApUqOkSlf6Uwf67WAe2PUTJjthvwzPh9DmOjL
+         bLjw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=XhbgDJiY;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:43 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-ch2-11v.sys.comcast.net (resqmta-ch2-11v.sys.comcast.net. [2001:558:fe21:29:69:252:207:43])
+        by mx.google.com with ESMTPS id h20si6310065ilo.117.2020.06.23.02.10.36
+        for <5samcasey@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 23 Jun 2020 02:10:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:43 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:43;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=XhbgDJiY;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:43 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-ch2-17v.sys.comcast.net ([69.252.207.113])
+	by resqmta-ch2-11v.sys.comcast.net with ESMTP
+	id neuqjf8FdA5WmnewujHp5o; Tue, 23 Jun 2020 09:10:36 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1592903436;
+	bh=VQhxlLVSZufCpxh/O0BNiNh6+hR7uXUx22ZC/TF/fuQ=;
+	h=Received:Received:Date:From:Reply-To:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=XhbgDJiYiF2++ZAdhFiypLQeXEoYRKNgurBPknBK4JhNN4W+fm42cBgsP2YBbRmNT
+	 ndfV4Xqjf3Q1nXIIMgdObs5aw+wZrFusE+2WGE/Gy471cPSpic7OWYEKZChZeewxJU
+	 y4emUdPQIspBkyzvzNlevP9SWxOu9DjloigEGf5hlzqCo1u/uorO46WfwuMAnMFopi
+	 Isst+9aMEy/1Ndo+d1RlLYpA+dBUL4FzzqQu9zUhq4TqPY3trw+4FVhDqRulM2jzb4
+	 SQvZeOTKQ1p/kt6WeLXPVEtUs35oDgnoMHpT8bQYkckSRnoUBVSG0P0BLSfOZxJKso
+	 b0+fWaQqb/MpA==
+Received: from oxapp-asa-21o.email.comcast.net ([96.118.50.86])
+	by resomta-ch2-17v.sys.comcast.net with ESMTPS
+	id newYjlMb6eNxfnewYjAVb7; Tue, 23 Jun 2020 09:10:15 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgeduhedrudekgedguddvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvehomhgtrghsthdqtfgvshhipdfqfgfvpdfpqffurfetoffkrfenuceurghilhhouhhtmecufedttdenucesvcftvggtihhpihgvnhhtshculddquddttddmnegotffhvedqqdeurggukfhmphhorhhtrghntggvucdlvddtmdenucfjughrpeffhfhrvffkufggtgfrkgfoihesrgdtsggsredtjeenucfhrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtnecuggftrfgrthhtvghrnhephfelfeekhedttdehjeejhfevvdetheelieeifeehhefgffevgfelhffguefhgeeunecukfhppeeliedruddukedrhedtrdekiedpvdeitddumeduleegmegtvddtudemsgguledtmeelheegfhemkeejgedumegssggukeemvghfsgefnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehhvghlohepohigrghpphdqrghsrgdqvdduohdrvghmrghilhdrtghomhgtrghsthdrnhgvthdpihhnvghtpeeliedruddukedrhedtrdekiedpmhgrihhlfhhrohhmpegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvthdprhgtphhtthhopeehshgrmhgtrghsvgihsehgmhgrihhlrdgtohhm
+X-Xfinity-VMeta: sc=-80.00;st=legit
+Date: Tue, 23 Jun 2020 05:10:13 -0400 (EDT)
+From: blackbart711@comcast.net
+Reply-To: blackbart711@comcast.net
+To: Sam Casey <5samcasey@gmail.com>
+Message-ID: <1705187901.413615.1592903414825@connect.xfinity.com>
+Subject: the last E-mail
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_413614_751355201.1592903414811"
+X-Priority: 3
+Importance: Medium
+X-Mailer: Open-Xchange Mailer v7.10.0-Rev31
+X-Originating-IP: 2601:194:c201:bd90:954f:8741:bbd8:efb3
+X-Originating-Client: open-xchange-appsuite
+
+------=_Part_413614_751355201.1592903414811
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+SAM
+I just got a  look at my E-mail to you...please forgive my 'screw-up'
+your Dad will be able to (explain) sort it out...
+(sometimes I 'fade 'out or succumb to the sleep virus).. do not confuse with 'coronavirus'
+AND                                            
+
+l will act responsibly and tell you "I fell asleep on the job"
+
+does that mean "I AM FIRED"
+
+your response  might  make my day
+Grandpa Bart.
+
+------=_Part_413614_751355201.1592903414811
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+ </head>
+ <body>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   SAM
+   <br>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   I just got a&nbsp; look at my E-mail to you...please forgive my 'screw-up'
+   <br>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   your Dad will be able to (explain) sort it out...
+   <br>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   (sometimes I 'fade 'out or succumb to the sleep virus)..
+   <span style="font-size: 16pt;">do not confuse with 'coronavirus'</span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND
+   <span style="font-size: 18pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 18pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 18pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; l will act responsibly and tell you "I fell asleep on the job"</span>
+   <br>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 12pt;"><br></span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 12pt;">does that mean "I AM FIRED"<br></span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 12pt;"><br></span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 12pt;">your response&nbsp; might&nbsp; make my day<br></span>
+  </div>
+  <div style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-size: 12pt;">Grandpa Bart.<br></span>
+  </div> 
+ </body>
+</html>
+------=_Part_413614_751355201.1592903414811--

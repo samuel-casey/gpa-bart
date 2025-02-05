@@ -1,0 +1,114 @@
+Delivered-To: scasey5@babson.edu
+Received: by 2002:a05:6a10:a15b:0:0:0:0 with SMTP id r27csp605807pxc;
+        Tue, 4 Aug 2020 12:31:35 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyDuYnAph6N1IKjACZwmo4qT31+e46RW+tLR69XOZ9uqfF33A27K226+QIWyaLGp7CTNs4A
+X-Received: by 2002:a6b:8b10:: with SMTP id n16mr6724017iod.11.1596569495051;
+        Tue, 04 Aug 2020 12:31:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1596569495; cv=none;
+        d=google.com; s=arc-20160816;
+        b=M+ywnSy1ZK0nfYkpNs95ecql3YwZBCvT7eRyg8eRpcWmRd6FPgxpSzKUgZGuGIS5jm
+         V8LeMi3ZlpnKJTl+N5x5JhFfAmfedlyYJO7ndPT2zxUBUeKrCUdhpjDi/wUCDHNs2Id+
+         NaC+my2IMiwBGgn+ZsGzGVsZxQUemi4jLVLsaMNQ8l4H18bqKzZcbfLw8T3r29acZQJE
+         JhdpJpxGCI27Thom2Ye4tf2B+GpApajQ5amnbPfOAJ8qXcW/MC94FVulX1VLwlLf8oGn
+         LBtNg3sdYFSsCXo1XieZ7I5GbIIYWJloyIw7Rt8EmxtCwy1Qp2xO4i6durDKSJm3GS8d
+         n2bQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=importance:mime-version:subject:message-id:to:from:date
+         :dkim-signature:dkim-signature;
+        bh=AEiIy5t2JgXQwP/91yehTb6tRMzDh6YBpJPgsWcWRrI=;
+        b=OkZhakuUjPxkgQMH5TWN+423TdP0Plxcuc43BaL9xt5lq0eE3rlScfEHILRkMtLM8G
+         U29lUcTYvb4MZZUAd4pdNO4okFfI+gWxj4+x10tKiNDWkJPydNV0d1pKhvkRym2WDHE6
+         FBe79qPgtFD+JUO7hYji4ruwWec6ukzjSdsMybEMT1pWa1yW8gn/CT8L0iqR0UGEiOWy
+         2hM3i25GyOk0s32RdZWpes6wMlnw5T4/XSkoekWwVVIrffVz8E3CPvZVnfO76lcKHRCA
+         JNgDvJuKjuVD0AMOebuoHdjHXvOjE1Bjvt0L7/bHR7neTc/3fE3OJ2ezCu4Z+OCXdlUu
+         h62Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=jkmJLqct;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b="Gphsc/ei";
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:82 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Return-Path: <blackbart711@comcast.net>
+Received: from resdmta-ch2-02v.sys.comcast.net (resdmta-ch2-02v.sys.comcast.net. [2001:558:fe21:29:69:252:207:82])
+        by mx.google.com with ESMTPS id f5si843934ils.46.2020.08.04.12.31.34
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 04 Aug 2020 12:31:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:82 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:82;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b=jkmJLqct;
+       dkim=pass header.i=@comcast.net header.s=20190202a header.b="Gphsc/ei";
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:82 as permitted sender) smtp.mailfrom=blackbart711@comcast.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=comcast.net
+Received: from resqmta-ch2-09v.sys.comcast.net ([69.252.207.41])
+	by resqmta-ch2-12v.sys.comcast.net with ESMTP
+	id 31j9kKuQXhfoZ32eskIlub; Tue, 04 Aug 2020 19:31:34 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1596569494;
+	bh=AEiIy5t2JgXQwP/91yehTb6tRMzDh6YBpJPgsWcWRrI=;
+	h=Received:Received:Received:Date:From:To:Message-ID:Subject:
+	 MIME-Version:Content-Type;
+	b=jkmJLqct0LeLOO6AnH0x4kT+9yhHTEn1eXm5wLQ89/Y489hhnw4E0Br8MiQyEpKF5
+	 zwN4fOjpCt2faz4FjWnq+Z+evIt3GwuI6DvxzV/mALPkyvyhBW3dxOSm2ezxZnnPMi
+	 NstPdeKW0HRv3BnDRB3rPiv2ja68tq0ldrckOV6VeSiFPLCyMNx5lSV4GM6YF8Yxpd
+	 98OKs2y+qq8ja+I//HmiowHZ5J5DLWlUQ0BxHu6r3cbBXX+hxRct3IHboU879NP0Ey
+	 d/4aKgd0OJ9KPsRSm0tU0gCAPUldL49sW0fmJeFvLW81HW6O+Bs4fHRLsmuXVhrm/L
+	 ocm19rE6ZRDSQ==
+Received: from resomta-ch2-08v.sys.comcast.net ([69.252.207.104])
+	by resqmta-ch2-09v.sys.comcast.net with ESMTP
+	id 32Ifk1spaeHox32eskWt1c; Tue, 04 Aug 2020 19:31:34 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=20190202a; t=1596569494;
+	bh=AEiIy5t2JgXQwP/91yehTb6tRMzDh6YBpJPgsWcWRrI=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type;
+	b=Gphsc/eiXHZQB+t3wUE5zaBpPOfFpShv5hlSiKVuSPmSB4dN0FBkNa9q3/5aukzJw
+	 UN1xzsC2DgEcGuEf5PqCcQDbrVDCuoVB8VqAmQ+O+LAb425+q4NqcoFLiPsyxHg6Sf
+	 L1Kph02E3CpZQeXSZPyhoLcdYKFPtNUDqfwCvWMt7hzkytK8SFuqGBFkWP/B/HHQ8a
+	 T4ljwgPvXPJFqX82Z/gs298Q7MQgiGWzb5vAe0f6fabS7p5QtqIJFsj25WVND3Pg38
+	 TIi1uR/dgG4isyeB7SR+6ua2hUrO/728Ur4bFfS175SIWoC5KW4D96oOP68qiBNyL9
+	 TbZSxbxuMP7Sg==
+Received: from oxapp-asd-34o.email.comcast.net ([96.115.230.129])
+	by resomta-ch2-08v.sys.comcast.net with ESMTPS
+	id 32eskZZLJfZqI32eskmYr1; Tue, 04 Aug 2020 19:31:34 +0000
+X-Xfinity-VAAS: gggruggvucftvghtrhhoucdtuddrgeduiedrjeeigddugedtucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvehomhgtrghsthdqtfgvshhipdfqfgfvpdfpqffurfetoffkrfenuceurghilhhouhhtmecufedttdenucesvcftvggtihhpihgvnhhtshculddquddttddmnecujfgurhepfffhvffkufggtgfrkgfoihesrgdtregsredtjeenucfhrhhomhepsghlrggtkhgsrghrthejuddusegtohhmtggrshhtrdhnvghtnecuggftrfgrthhtvghrnheptdetgfffgedvkeffvdfhleffuddvtedugfduudeifeetjeegkeejjeejleeggeffnecukfhppeeliedrudduhedrvdeftddruddvledpvdeitddumeduleegmegtvddtudemsgguledtmehftddvudemleefieeimegrleektdemiehffedtnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehhvghlohepohigrghpphdqrghsugdqfeegohdrvghmrghilhdrtghomhgtrghsthdrnhgvthdpihhnvghtpeeliedrudduhedrvdeftddruddvledpmhgrihhlfhhrohhmpegslhgrtghksggrrhhtjeduudestghomhgtrghsthdrnhgvthdprhgtphhtthhopehstggrshgvhiehsegsrggsshhonhdrvgguuh
+X-Xfinity-VMeta: sc=-100.00;st=legit
+Date: Tue, 4 Aug 2020 15:31:33 -0400
+From: blackbart711@comcast.net
+To: "Casey, Sam" <scasey5@babson.edu>
+Message-ID: <1328944951.30785.1596569494167@connect.xfinity.com>
+Subject: somkeTHingh
+Content-Type: multipart/alternative;
+	boundary="----=_Part_30784_185546783.1596569494153"
+X-Mailer: Open-Xchange Mailer v7.10.3-Rev18
+X-Originating-IP: 2601:194:c201:bd90:f021:9366:a980:6f30
+X-Originating-Client: open-xchange-appsuite
+MigrationWiz-UID: 173baf526efc805c
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+------=_Part_30784_185546783.1596569494153
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+qSamuel
+seemWWSW
+
+------=_Part_30784_185546783.1596569494153
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
+ <body>
+  <div class="default-style" style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-family: helvetica; font-size: 12pt;">qSamuel</span>
+   <br>
+  </div>
+  <div class="default-style" style="color: rgb(51, 51, 51); font-family: helvetica,arial,sans-serif; font-size: 12pt;">
+   <span style="font-family: helvetica; font-size: 12pt;">seemWWSW<br></span>
+  </div> 
+ </body>
+</html>
+------=_Part_30784_185546783.1596569494153--

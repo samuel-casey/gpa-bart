@@ -1,0 +1,71 @@
+Delivered-To: scasey5@babson.edu
+Received: by 10.229.65.74 with SMTP id h10csp1897282qci;
+        Mon, 1 Jun 2015 07:20:39 -0700 (PDT)
+X-Received: by 10.52.65.38 with SMTP id u6mr28750361vds.24.1433168439255;
+        Mon, 01 Jun 2015 07:20:39 -0700 (PDT)
+Return-Path: <blackbart711@comcast.net>
+Received: from resqmta-ch2-02v.sys.comcast.net (resqmta-ch2-02v.sys.comcast.net. [2001:558:fe21:29:69:252:207:34])
+        by mx.google.com with ESMTPS id bd5si377624vdb.56.2015.06.01.07.20.38
+        for <scasey5@babson.edu>
+        (version=TLSv1.2 cipher=RC4-SHA bits=128/128);
+        Mon, 01 Jun 2015 07:20:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:34 as permitted sender) client-ip=2001:558:fe21:29:69:252:207:34;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of blackbart711@comcast.net designates 2001:558:fe21:29:69:252:207:34 as permitted sender) smtp.mail=blackbart711@comcast.net;
+       dkim=pass header.i=@comcast.net;
+       dmarc=pass (p=NONE dis=NONE) header.from=comcast.net
+Received: from resomta-ch2-12v.sys.comcast.net ([69.252.207.108])
+	by resqmta-ch2-02v.sys.comcast.net with comcast
+	id b2H81q0042LrikM012LeyS; Mon, 01 Jun 2015 14:20:38 +0000
+Received: from resmail-ch2-422v.sys.comcast.net ([162.150.49.201])
+	by resomta-ch2-12v.sys.comcast.net with comcast
+	id b2Le1q00V4LTAdN012Le1L; Mon, 01 Jun 2015 14:20:38 +0000
+Date: Mon, 1 Jun 2015 14:20:38 +0000
+From: blackbart711@comcast.net
+To: Emilycasey1695@gmail.com, scasey5@babson.edu
+Message-ID: <1632381528.16885920.1433168438532.JavaMail.zimbra@comcast.net>
+In-Reply-To: <60808702.16879303.1433168030534.JavaMail.zimbra@comcast.net>
+Subject: sorry it took so long.
+Content-Type: multipart/alternative;
+	boundary="----=_Part_16885919_1165388424.1433168438531"
+X-Originating-IP: [::ffff:24.61.208.108]
+X-Mailer: Zimbra 8.0.7_GA_6031 (ZimbraWebClient - GC43 (Win)/8.0.7_GA_6031)
+Thread-Topic: sorry it took so long.
+Thread-Index: HT7m1ulmviHVp4q1hBdrHhXLjxrwtw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=q20140121; t=1433168438;
+	bh=ypNJSEATzx9VZzugfofrhZLiWTIbFN5i6zu6XxMW0ek=;
+	h=Received:Received:Date:From:To:Message-ID:Subject:MIME-Version:
+	 Content-Type;
+	b=objZYRlxvcP82bMtpF9GzotDmWarxgKgGgFVcjO5bOPV6g2VDUCfZQrqcU5fNvB7D
+	 yM+cqxztNbue5Q18wS99dJZeY/noUpt+AxwTy/FPzLjBSLDteBR7EV8Vl1EyoJ+Sgf
+	 ApIjxSr1a8HbXhkhhttbaVEbH7wla67w0uUFz+xoshXVXsQyHFmGgGkaxSYxwdUK2p
+	 Kh2kNwRaK7wknWDQJ9N7gV3GOa5BE8lOtRsd568EwJes1EevELxh5YBliw3kKeNV9c
+	 0ruLRKAF29b8q6LPKtK3tHiwCm86D1mZ/udJCPKuyFm6dp5bLnIyNIf/9pBFhUXMfO
+	 1SaF00Qd1u/rQ==
+MigrationWiz-UID: 14daf7ee77bcf254
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+------=_Part_16885919_1165388424.1433168438531
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Emil...Sam 
+
+Sorry it took so long to say Thank you for the 'sliotar' I am having a great time banging it around with my 'caman' 
+So far I have only smashed two windows...my aim is not quite as good as it used to be............!!... 
+
+I know you are looking forward to your summer vacation...hope it is everything you planned for.... 
+Grandpa Bart. 
+
+------=_Part_16885919_1165388424.1433168438531
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body><div style="font-family: Arial; font-size: 12pt; color: #000000"><div aria-label="Compose body">Emil...Sam</div><div aria-label="Compose body"><br></div><div aria-label="Compose body">Sorry it took so long to say Thank you for the 'sliotar' I am having a great time banging it around with my 'caman'</div><div aria-label="Compose body">So far I have only smashed two windows...my aim is not quite as good as it used to be............!!...</div><div aria-label="Compose body"><br></div><div aria-label="Compose body">I know you are looking forward to your summer vacation...hope it is everything you planned for....</div><div aria-label="Compose body">Grandpa Bart.</div></div></body></html>
+------=_Part_16885919_1165388424.1433168438531--

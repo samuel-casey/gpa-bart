@@ -1,0 +1,13 @@
+exclude:
+  - venv
+  - node_modules
+  - .git
+  - .github
+  - .gitignore
+  - README.md
+  - package.json
+  - package-lock.json
+
+# Basic site settings
+title: Remembering Bart Casey
+description: A collection of emails, photos, and stories from Bart's life

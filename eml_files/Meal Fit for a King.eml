@@ -1,0 +1,134 @@
+Delivered-To: scasey5@babson.edu
+Received: by 10.100.177.137 with SMTP id j9csp1016619pjb;
+        Sun, 16 Apr 2017 19:30:38 -0700 (PDT)
+X-Received: by 10.200.48.14 with SMTP id f14mr7181168qte.201.1492396238199;
+        Sun, 16 Apr 2017 19:30:38 -0700 (PDT)
+Return-Path: <bcasey@daymarksi.com>
+Received: from us-smtp-delivery-176.mimecast.com (us-smtp-delivery-176.mimecast.com. [216.205.24.176])
+        by mx.google.com with ESMTPS id 57si9495886qtv.284.2017.04.16.19.30.37
+        for <scasey5@babson.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Sun, 16 Apr 2017 19:30:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bcasey@daymarksi.com designates 216.205.24.176 as permitted sender) client-ip=216.205.24.176;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@daymarksi.onmicrosoft.com;
+       spf=pass (google.com: domain of bcasey@daymarksi.com designates 216.205.24.176 as permitted sender) smtp.mailfrom=bcasey@daymarksi.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=daymarksi.onmicrosoft.com; s=selector1-daymarksi-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=E1tupcqbmvkDTQGjT28no63mwq9W0Y/S3l2Stp77iW8=;
+ b=iISlcl4CThf2pGHLrbKno9KDcLXjVCG6FNoDoUjO7In0aDMZ1bt7FfCThgMA+x+TZhoRnTDHhFcBoq2ENPoet8tAlUVziyNBkU5NYD1ywevtt/mcMTGz6mKys9+gSmItXCcAAEeLqb4ITkn18M7erJNBFsAS/bHPo/Wqr01szBA=
+Received: from NAM01-BN3-obe.outbound.protection.outlook.com
+ (mail-bn3nam01lp0184.outbound.protection.outlook.com [216.32.180.184])
+ (Using TLS) by us-smtp-1.mimecast.com with ESMTP id
+ us-mta-145-cvuIwgYONCK0AlAoXcK7Rg-1; Sun, 16 Apr 2017 22:30:35 -0400
+Received: from BN6PR08MB2449.namprd08.prod.outlook.com (10.168.226.11) by
+ BN6PR08MB2451.namprd08.prod.outlook.com (10.168.226.13) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1034.10; Mon, 17 Apr 2017 02:30:32 +0000
+Received: from BN6PR08MB2449.namprd08.prod.outlook.com ([10.168.226.11]) by
+ BN6PR08MB2449.namprd08.prod.outlook.com ([10.168.226.11]) with mapi id
+ 15.01.1034.012; Mon, 17 Apr 2017 02:30:32 +0000
+From: Brian Casey <bcasey@daymarksi.com>
+To: Casey1 <wendy.casey@comcast.net>, Samuel Casey <scasey5@babson.edu>, Emily
+ Casey <emily.casey1695@gmail.com>
+Subject: Fwd: A MEAL FIT FOR A KING
+Thread-Topic: A MEAL FIT FOR A KING
+Thread-Index: AQHStxh7fl3BvG2zKUGnQAnLPo+YY6HI1vu9
+Date: Mon, 17 Apr 2017 02:30:32 +0000
+Message-ID: <CF9650F4-8697-4DA9-8421-451DD4BB81C3@daymarksi.com>
+References: <1553015606.1673882.1492391884572@connect.xfinity.com>
+In-Reply-To: <1553015606.1673882.1492391884572@connect.xfinity.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [2600:1000:b124:8571:e576:5857:4f0d:8540]
+x-microsoft-exchange-diagnostics: 1;BN6PR08MB2451;7:BIvYVQaojbiLoZMgutM0s3DIyyOFos/hKfyFVRmA8dm9l+oiAYNYgPKgMs252cdaYPl1KmD36+eJQLZMIGCVADOJ8DPz8L9QBvKYItpRs+mJwtUyUQIFwBl4Gv0R2LftZFPI7OtcA1F/5hGDdasdXAwoF/6E2ZF4pdJ09TrhAHeoWFhbBGlV23xHszbj86JcJ3osNxluKFPX/OtKAie/bflLtXN4T0AGIUWBfKwXQUjyZHyHDd1v6aLQFTxHkg+J6mYZSjbb8Wn/t57ylWzxwApZAA3zj5qAPbRjef2BwG25vMaU9Fa6nxaguHAp2jLBt4j8FZQ6Rhjw/AqBA44Qkg==;20:dpvUXRkjm5qsqJhxD11bqrkGcjN3WMphGMfBMpkbdC0BiS/sIj2sWwY1bYUuukaOBUEFT6Jrid7gI9Wq+CGTjKvpsZDItXxukz5mcMQ7M8exlXfEVtce+V9hPI/wbibOdlfpzxa47xXgCMtxWguQxOMeEO8wkS/ibB7mpebIx8k=
+x-forefront-antispam-report: SFV:SKI;SCL:-1SFV:NSPM;SFS:(10019020)(39400400002)(39450400003)(377454003)(82746002)(83716003)(8676002)(81156014)(38730400002)(33656002)(36756003)(9886003)(81166006)(5003630100001)(102836003)(5660300001)(53546009)(7736002)(2906002)(6116002)(189998001)(25786009)(3280700002)(3660700001)(8936002)(54896002)(2473003)(39060400002)(6512007)(2950100002)(229853002)(2171002)(86362001)(99286003)(2900100001)(53936002)(6436002)(8666007)(236005)(50986999)(76176999)(6486002)(77096006)(122556002)(6506006)(54356999)(217873001);DIR:OUT;SFP:1102;SCL:1;SRVR:BN6PR08MB2451;H:BN6PR08MB2449.namprd08.prod.outlook.com;FPR:;SPF:None;MLV:ovrnspm;PTR:InfoNoRecords;LANG:en;
+x-ms-office365-filtering-correlation-id: cd3e8850-381c-488c-a509-08d48539b89f
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(2017030254075)(201703131423075)(201703031133081)(201702281549075);SRVR:BN6PR08MB2451;
+x-microsoft-antispam-prvs: <BN6PR08MB245187A6B6F4558D010D586BC9060@BN6PR08MB2451.namprd08.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(68173958961439);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(6040450)(601004)(2401047)(8121501046)(5005006)(3002001)(93006095)(93001095)(10201501046)(6041248)(20161123560025)(201703131423075)(201703061421075)(20161123562025)(20161123555025)(20161123564025)(6072148);SRVR:BN6PR08MB2451;BCL:0;PCL:0;RULEID:;SRVR:BN6PR08MB2451;
+x-forefront-prvs: 02801ACE41
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+X-OriginatorOrg: daymarksi.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 17 Apr 2017 02:30:32.1391
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 863aefe0-d29f-40cd-8473-c37cd153bf81
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN6PR08MB2451
+X-MC-Unique: cvuIwgYONCK0AlAoXcK7Rg-1
+Content-Type: multipart/alternative;
+	boundary="_000_CF9650F486974DA98421451DD4BB81C3daymarksicom_"
+MigrationWiz-UID: 15b79bf65a6ab507
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+
+--_000_CF9650F486974DA98421451DD4BB81C3daymarksicom_
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+VGhhbmtzIGZvciBob3N0aW5nIEdyYW5kcGEgb24gRWFzdGVyLiAgSGUgZW5qb3llZCBpdCBhcyB1
+IGNhbiBzZWUuIDopDQoNClNlbnQgZnJvbSBteSBpUGhvbmUNCjYxNyA5NDcgMDcwOQ0KDQpCZWdp
+biBmb3J3YXJkZWQgbWVzc2FnZToNCg0KRnJvbTogYmxhY2tiYXJ0NzExQGNvbWNhc3QubmV0PG1h
+aWx0bzpibGFja2JhcnQ3MTFAY29tY2FzdC5uZXQ+DQpEYXRlOiBBcHJpbCAxNiwgMjAxNyBhdCA5
+OjE4OjA0IFBNIEVEVA0KVG86IEJyaWFuIENhc2V5IDxiY2FzZXlAZGF5bWFya3NpLmNvbTxtYWls
+dG86YmNhc2V5QGRheW1hcmtzaS5jb20+Pg0KU3ViamVjdDogQSBNRUFMIEZJVCBGT1IgQSBLSU5H
+DQpSZXBseS1UbzogYmxhY2tiYXJ0NzExQGNvbWNhc3QubmV0PG1haWx0bzpibGFja2JhcnQ3MTFA
+Y29tY2FzdC5uZXQ+DQoNCg0KQnJpYW4NCg0KdG8gV2VuZHkgYW5kIEVtaWx5IGFuZCB5b3UgYW5k
+IHRoZSBkb2dzIEkgYWxtb3N0IGZvcmdvdCBTQU0gYSBzaW5jZXJlIFRIQU5LIFlPVS4uLi5UaGUg
+UElFIHdhcyBkZWxpY2lvdXMgRW1pbHkgd2FzIGRlbGlnaHRmdWwNCg0KYW5kIGluc3RydWN0YWJs
+ZSAoc2hlIHdpbGwga25vdykgYW5kIGhlbHBmdWwgdG9vLi4uV2VuZHkgVGhhbmtZb3UuDQoNClNB
+TSBleHBlbmRpbmcgYW5kIGV4cGFuZGluZyBoaXMgIHdpc2ggdGhhdCBncmFkdWF0aW9uIGRvZXMg
+bm90IGNvbWUgIHRvbyAgc29vbi4uLkl0cyAgQWxsIGEgYnVuY2ggb2YgQ1JFRURBU1RSQVcgcmln
+aHQgQnJpYW4hISENCg0KR3JhbnBhLCBEYWQsIEJhcnQuDQoNCkRpc2NsYWltZXINCg0KVGhlIGlu
+Zm9ybWF0aW9uIGNvbnRhaW5lZCBpbiB0aGlzIGNvbW11bmljYXRpb24gZnJvbSB0aGUgc2VuZGVy
+IGlzIGNvbmZpZGVudGlhbC4gSXQgaXMgaW50ZW5kZWQgc29sZWx5IGZvciB1c2UgYnkgdGhlIHJl
+Y2lwaWVudCBhbmQgb3RoZXJzIGF1dGhvcml6ZWQgdG8gcmVjZWl2ZSBpdC4gSWYgeW91IGFyZSBu
+b3QgdGhlIHJlY2lwaWVudCwgeW91IGFyZSBoZXJlYnkgbm90aWZpZWQgdGhhdCBhbnkgZGlzY2xv
+c3VyZSwgY29weWluZywgZGlzdHJpYnV0aW9uIG9yIHRha2luZyBhY3Rpb24gaW4gcmVsYXRpb24g
+b2YgdGhlIGNvbnRlbnRzIG9mIHRoaXMgaW5mb3JtYXRpb24gaXMgc3RyaWN0bHkgcHJvaGliaXRl
+ZCBhbmQgbWF5IGJlIHVubGF3ZnVsLg0K
+--_000_CF9650F486974DA98421451DD4BB81C3daymarksicom_
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+DQo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRl
+eHQvaHRtbDsgY2hhcnNldD11dGYtOCI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdHlsZTEg
+e2ZvbnQtZmFtaWx5OiAiVGltZXMgTmV3IFJvbWFuIjt9PC9zdHlsZT48L2hlYWQ+PGJvZHkgZGly
+PSJhdXRvIj4NCjxkaXY+VGhhbmtzIGZvciBob3N0aW5nIEdyYW5kcGEgb24gRWFzdGVyLiAmbmJz
+cDtIZSBlbmpveWVkIGl0IGFzIHUgY2FuIHNlZS4gOikmbmJzcDs8YnI+DQo8YnI+DQpTZW50IGZy
+b20gbXkgaVBob25lDQo8ZGl2PjYxNyA5NDcgMDcwOTwvZGl2Pg0KPC9kaXY+DQo8ZGl2Pjxicj4N
+CkJlZ2luIGZvcndhcmRlZCBtZXNzYWdlOjxicj4NCjxicj4NCjwvZGl2Pg0KPGJsb2NrcXVvdGUg
+dHlwZT0iY2l0ZSI+DQo8ZGl2PjxiPkZyb206PC9iPiA8YSBocmVmPSJtYWlsdG86YmxhY2tiYXJ0
+NzExQGNvbWNhc3QubmV0Ij5ibGFja2JhcnQ3MTFAY29tY2FzdC5uZXQ8L2E+PGJyPg0KPGI+RGF0
+ZTo8L2I+IEFwcmlsIDE2LCAyMDE3IGF0IDk6MTg6MDQgUE0gRURUPGJyPg0KPGI+VG86PC9iPiBC
+cmlhbiBDYXNleSAmbHQ7PGEgaHJlZj0ibWFpbHRvOmJjYXNleUBkYXltYXJrc2kuY29tIj5iY2Fz
+ZXlAZGF5bWFya3NpLmNvbTwvYT4mZ3Q7PGJyPg0KPGI+U3ViamVjdDo8L2I+IDxiPkEgTUVBTCBG
+SVQgRk9SIEEgS0lORzwvYj48YnI+DQo8Yj5SZXBseS1Ubzo8L2I+IDxhIGhyZWY9Im1haWx0bzpi
+bGFja2JhcnQ3MTFAY29tY2FzdC5uZXQiPmJsYWNrYmFydDcxMUBjb21jYXN0Lm5ldDwvYT48YnI+
+DQo8YnI+DQo8L2Rpdj4NCjwvYmxvY2txdW90ZT4NCjxibG9ja3F1b3RlIHR5cGU9ImNpdGUiPg0K
+PGRpdj4NCjxwPkJyaWFuPC9wPg0KPHA+dG8gV2VuZHkgYW5kIEVtaWx5IGFuZCB5b3UgYW5kIHRo
+ZSBkb2dzIEkgYWxtb3N0IGZvcmdvdCBTQU0gYSBzaW5jZXJlIFRIQU5LIFlPVS4uLi5UaGUgUElF
+IHdhcyBkZWxpY2lvdXMgRW1pbHkgd2FzIGRlbGlnaHRmdWw8L3A+DQo8cD5hbmQgaW5zdHJ1Y3Rh
+YmxlIChzaGUgd2lsbCBrbm93KSBhbmQgaGVscGZ1bCB0b28uLi5XZW5keSBUaGFua1lvdS48L3A+
+DQo8cD5TQU0gZXhwZW5kaW5nIGFuZCBleHBhbmRpbmcgaGlzICZuYnNwO3dpc2ggdGhhdCBncmFk
+dWF0aW9uIGRvZXMgbm90IGNvbWUgJm5ic3A7dG9vJm5ic3A7IHNvb24uLi5JdHMgJm5ic3A7QWxs
+IGEgYnVuY2ggb2YgQ1JFRURBU1RSQVcgcmlnaHQgQnJpYW4hISE8L3A+DQo8cD5HcmFucGEsIERh
+ZCwgQmFydC48L3A+DQo8L2Rpdj4NCjwvYmxvY2txdW90ZT4NCg0KPGJyPjxicj48cCBzdHlsZT0i
+Zm9udC1mYW1pbHk6IFZlcmRhbmE7IGZvbnQtc2l6ZToxMHB0OyBjb2xvcjojNjY2NjY2OyI+PGI+
+RGlzY2xhaW1lcjwvYj48L3A+PHAgc3R5bGU9ImZvbnQtZmFtaWx5OiBWZXJkYW5hOyBmb250LXNp
+emU6OHB0OyBjb2xvcjojNjY2NjY2OyI+VGhlIGluZm9ybWF0aW9uIGNvbnRhaW5lZCBpbiB0aGlz
+IGNvbW11bmljYXRpb24gZnJvbSB0aGUgc2VuZGVyIGlzIGNvbmZpZGVudGlhbC4gSXQgaXMgaW50
+ZW5kZWQgc29sZWx5IGZvciB1c2UgYnkgdGhlIHJlY2lwaWVudCBhbmQgb3RoZXJzIGF1dGhvcml6
+ZWQgdG8gcmVjZWl2ZSBpdC4gSWYgeW91IGFyZSBub3QgdGhlIHJlY2lwaWVudCwgeW91IGFyZSBo
+ZXJlYnkgbm90aWZpZWQgdGhhdCBhbnkgZGlzY2xvc3VyZSwgY29weWluZywgZGlzdHJpYnV0aW9u
+IG9yIHRha2luZyBhY3Rpb24gaW4gcmVsYXRpb24gb2YgdGhlIGNvbnRlbnRzIG9mIHRoaXMgaW5m
+b3JtYXRpb24gaXMgc3RyaWN0bHkgcHJvaGliaXRlZCBhbmQgbWF5IGJlIHVubGF3ZnVsLjxicj48
+YnI+PC9wPjwvYm9keT48L2h0bWw+DQo=
+
+--_000_CF9650F486974DA98421451DD4BB81C3daymarksicom_--
